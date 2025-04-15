@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "flags": {
+        "is_on_ground": true
+      },
+      "effects": {
+        "minecraft:slow_falling": {
+          "amplifier": 2,
+          "visible": false
+        }
+      }
+    }
+  }

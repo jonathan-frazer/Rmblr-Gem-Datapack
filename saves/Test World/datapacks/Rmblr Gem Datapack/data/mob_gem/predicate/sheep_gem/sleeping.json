@@ -1,0 +1,37 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "effects": {
+            "minecraft:blindness": {
+              "amplifier": 22,
+              "visible": false
+            },
+            "minecraft:slowness": {
+              "amplifier": 28,
+              "visible": false
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "effects": {
+              "minecraft:resistance": {
+                "amplifier": 42,
+                "visible": false
+              }
+            }
+          }
+        }
+      }
+    ]
+  }

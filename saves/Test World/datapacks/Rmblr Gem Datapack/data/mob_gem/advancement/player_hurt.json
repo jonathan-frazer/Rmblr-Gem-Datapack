@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "interrupt_sleep": {
+        "trigger": "minecraft:entity_hurt_player"
+      }
+    },
+    "requirements": [],
+    "rewards": {
+      "function": "mob_gem:mob_gem/player_hurt"
+    }
+  }

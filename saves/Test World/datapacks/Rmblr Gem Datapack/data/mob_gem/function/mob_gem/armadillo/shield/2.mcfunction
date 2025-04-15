@@ -1,0 +1,9 @@
+#Summon Mobs
+summon armadillo ^1.00 ^ ^0.00 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_0"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,0f]}
+summon armadillo ^0.71 ^ ^0.71 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_1"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,45f]}
+summon armadillo ^0.00 ^ ^1.00 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_2"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,90f]}
+summon armadillo ^-0.71 ^ ^0.71 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_3"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,135f]}
+summon armadillo ^-1.00 ^ ^0.00 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_4"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,180f]}
+summon armadillo ^-0.71 ^ ^-0.71 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_5"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,225f]}
+summon armadillo ^-0.00 ^ ^-1.00 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_6"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,270f]}
+summon armadillo ^0.71 ^ ^-0.71 {DeathLootTable:"minecraft:empty",NoGravity:1b,NoAI:1b,Tags:["mbGemCleanUp","armaDilloShield","armaDilloShield_7"],Invulnerable:1b,Team:"Intangible",Rotation:[0f,315f]}

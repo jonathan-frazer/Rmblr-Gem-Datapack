@@ -1,0 +1,26 @@
+{
+    "parent": "minecraft:item/handheld_rod",
+    "textures": {
+     "layer0": "item/warped_fungus_on_a_stick"
+    },
+   
+    "overrides": [
+     {"predicate": {"custom_model_data": 523123}, "model": "item/mob_gem/allay"},
+     {"predicate": {"custom_model_data": 523124}, "model": "item/mob_gem/armadillo"},
+     {"predicate": {"custom_model_data": 523125}, "model": "item/mob_gem/axolotl"},
+     {"predicate": {"custom_model_data": 523126}, "model": "item/mob_gem/cow"},
+     {"predicate": {"custom_model_data": 523127}, "model": "item/mob_gem/parrot"},
+     {"predicate": {"custom_model_data": 523128}, "model": "item/mob_gem/sheep"},
+     {"predicate": {"custom_model_data": 523129}, "model": "item/mob_gem/breeze"},
+     {"predicate": {"custom_model_data": 523130}, "model": "item/mob_gem/drowned"},
+     {"predicate": {"custom_model_data": 523131}, "model": "item/mob_gem/ravager"},
+     {"predicate": {"custom_model_data": 523132}, "model": "item/mob_gem/warden"},
+     {"predicate": {"custom_model_data": 523133}, "model": "item/mob_gem/strider"},
+     {"predicate": {"custom_model_data": 523134}, "model": "item/mob_gem/ghast"},
+     {"predicate": {"custom_model_data": 523135}, "model": "item/mob_gem/magma_cube"},
+     {"predicate": {"custom_model_data": 523136}, "model": "item/mob_gem/wither_skeleton"},
+     {"predicate": {"custom_model_data": 523137}, "model": "item/mob_gem/wither"},
+     {"predicate": {"custom_model_data": 523138}, "model": "item/mob_gem/enderman"},
+     {"predicate": {"custom_model_data": 523139}, "model": "item/mob_gem/shulker"}
+    ]
+   }

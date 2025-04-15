@@ -2,6 +2,52 @@
     "type": "minecraft:entity",
     "pools": [
       {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:warped_fungus_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Enderman Gem",
+                  "color": "#ff7fff",
+                  "italic": false
+                },
+                "target": "custom_name"
+              },
+              {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Ability: Teleport",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "Perk: Damage Increases when Looked at by Other Players",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+              {
+                "function": "minecraft:set_custom_model_data",
+                "value": 523138
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player",
+            "inverse": false
+          }
+        ]
+      },
+      {
         "bonus_rolls": 0,
         "entries": [
           {
@@ -34,5 +80,3 @@
     ],
     "random_sequence": "minecraft:entities/enderman"
   }
-
-  {}

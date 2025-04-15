@@ -1,0 +1,87 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:warped_fungus_on_a_stick",
+                "functions": [
+                  {
+                    "function": "minecraft:set_name",
+                    "name": {
+                      "text": "Breeze Gem",
+                      "color": "#b5bdff",
+                      "italic": false
+                    },
+                    "target": "custom_name"
+                  },
+                  {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    {
+                      "text": "Ability: Launch",
+                      "color": "green",
+                      "italic": false
+                    },
+                    {
+                      "text": "Perk: Doesn't Take Fall Damage",
+                      "color": "aqua",
+                      "italic": false
+                    }
+                  ],
+                  "mode": "replace_all"
+                },
+                  {
+                    "function": "minecraft:set_custom_model_data",
+                    "value": 523129
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:killed_by_player",
+                "inverse": false
+              }
+            ]
+          },
+      {
+        "bonus_rolls": 0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 2,
+                  "min": 1
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 2,
+                  "min": 1
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:breeze_rod"
+          }
+        ],
+        "rolls": 1
+      }
+    ],
+    "random_sequence": "minecraft:entities/breeze"
+  }

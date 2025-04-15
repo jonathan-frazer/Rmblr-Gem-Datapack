@@ -2,6 +2,52 @@
     "type": "minecraft:entity",
     "pools": [
       {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:warped_fungus_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Ghast Gem",
+                  "color": "#f4f4f4",
+                  "italic": false
+                },
+                "target": "custom_name"
+              },
+              {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Ability: Fire Aspect, 1/3 Hits",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "Perk: Holding Ghast Tears gives Regeneration",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+              {
+                "function": "minecraft:set_custom_model_data",
+                "value": 523134
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player",
+            "inverse": false
+          }
+        ]
+      },
+      {
         "bonus_rolls": 0,
         "entries": [
           {
@@ -64,5 +110,3 @@
     ],
     "random_sequence": "minecraft:entities/ghast"
   }
-
-  {}

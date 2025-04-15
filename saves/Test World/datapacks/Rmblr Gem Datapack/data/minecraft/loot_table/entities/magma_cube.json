@@ -2,6 +2,52 @@
     "type": "minecraft:entity",
     "pools": [
       {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:warped_fungus_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Magma Cube Gem",
+                  "color": "#ff481e",
+                  "italic": false
+                },
+                "target": "custom_name"
+              },
+              {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Ability: Stomp",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "Perk: Fire Resistance in the Nether",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+              {
+                "function": "minecraft:set_custom_model_data",
+                "value": 523135
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player",
+            "inverse": false
+          }
+        ]
+      },
+      {
         "bonus_rolls": 0,
         "entries": [
           {
@@ -134,5 +180,3 @@
     ],
     "random_sequence": "minecraft:entities/magma_cube"
   }
-
-  {}

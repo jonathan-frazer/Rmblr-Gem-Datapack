@@ -2,6 +2,52 @@
     "type": "minecraft:entity",
     "pools": [
       {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:warped_fungus_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Shulker Gem",
+                  "color": "#bd76b2",
+                  "italic": false
+                },
+                "target": "custom_name"
+              },
+              {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Ability: Levitation Burst",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "Perk: ",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+              {
+                "function": "minecraft:set_custom_model_data",
+                "value": 523139
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player",
+            "inverse": false
+          }
+        ]
+      },
+      {
         "bonus_rolls": 0,
         "conditions": [
           {
@@ -25,7 +71,4 @@
       }
     ],
     "random_sequence": "minecraft:entities/shulker"
-  }
-
-  {
   }

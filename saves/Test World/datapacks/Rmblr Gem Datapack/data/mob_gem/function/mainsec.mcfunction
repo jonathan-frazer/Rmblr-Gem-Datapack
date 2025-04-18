@@ -1,3 +1,6 @@
+#Prevent Gems from Despawning
+execute as @e[type=item,tag=mbGemitemInvul] run data modify entity @s Age set value 0
+
 #Cooldowns
 scoreboard players remove @a[scores={mbGem_AbilityCooldown=1..}] mbGem_AbilityCooldown 1
 

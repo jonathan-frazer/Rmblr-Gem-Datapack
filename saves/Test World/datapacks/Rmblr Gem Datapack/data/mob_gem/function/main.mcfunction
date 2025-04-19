@@ -25,7 +25,7 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability 
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:drowned_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/drowned/riptide/0
     execute as @a[scores={mbGemRiptide=1..}] run function mob_gem:mob_gem/drowned/riptide/2_back
-    execute as @a[scores={mbGemTrident=1..}] run function mob_gem:mob_gem/drowned/riptide/4_launch
+    execute as @a[scores={mbGemTrident=1..}] run function mob_gem:mob_gem/drowned/riptide/6_launch
 
 #Warden
     #Ability

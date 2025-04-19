@@ -1,0 +1,5 @@
+item replace entity @s[predicate=mob_gem:drowned_gem/trident/holding_mainhand] weapon.mainhand with warped_fungus_on_a_stick[custom_model_data=523171,custom_data={mbGem:1b},lore=['{"color":"green","italic":false,"text":"Ability: Riptide"}','{"color":"aqua","italic":false,"text":"Perk: Increases Speed in Water"}'],custom_name='{"color":"#008c64","italic":false,"text":"Drowned Gem"}'] 1
+item replace entity @s[predicate=mob_gem:drowned_gem/trident/holding_offhand] weapon.offhand with warped_fungus_on_a_stick[custom_model_data=523171,custom_data={mbGem:1b},lore=['{"color":"green","italic":false,"text":"Ability: Riptide"}','{"color":"aqua","italic":false,"text":"Perk: Increases Speed in Water"}'],custom_name='{"color":"#008c64","italic":false,"text":"Drowned Gem"}'] 1
+
+#Clear Water
+execute at @s run function mob_gem:mob_gem/drowned/riptide/5_remove_water

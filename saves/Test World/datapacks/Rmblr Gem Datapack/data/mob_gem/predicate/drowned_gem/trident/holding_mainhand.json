@@ -1,0 +1,23 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "type": "player",
+        "slots": {
+            "weapon.mainhand": {
+                "items": "minecraft:trident",
+                "components": {
+                  "minecraft:enchantments": {
+                    "levels": {
+                      "minecraft:riptide": 3
+                    }
+                  },
+                  "minecraft:custom_data": {
+                    "mbGemTrident": true
+                  }
+                }
+              }
+        }
+    }
+}
+

@@ -19,6 +19,12 @@ scoreboard objectives add mbGemDJumptimer dummy
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
 
+#Drowned
+scoreboard objectives add mbGemRiptide dummy
+scoreboard objectives add mbGemTrident used:trident
+
+#Warden
+scoreboard objectives add mbGemSonicBoom dummy
 
 team add Intangible
 team modify Intangible collisionRule never

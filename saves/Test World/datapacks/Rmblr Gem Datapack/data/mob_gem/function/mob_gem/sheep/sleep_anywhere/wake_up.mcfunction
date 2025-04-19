@@ -7,3 +7,6 @@ scoreboard players reset @s mbGemSleepTick
 #Clear Effects
 effect clear @s slowness
 effect clear @s blindness
+
+#Add Cooldown
+scoreboard players set @s mbGem_AbilityCooldown 4

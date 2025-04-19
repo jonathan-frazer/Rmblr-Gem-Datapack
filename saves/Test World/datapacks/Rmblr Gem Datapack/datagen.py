@@ -48,6 +48,7 @@ print("Wrote to the Warped Fungus File")
 #Model Files
 resource_pack_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item\mob_gem"
 for mob in minecraft_mobs:
+	if os.path.exists(os.path.join(resource_pack_path, f"{mob}.json")): continue
 	with open(os.path.join(resource_pack_path, f"{mob}.json"), 'w') as f:
 		json.dump({"parent": "minecraft:item/handheld",
 		"textures": {
@@ -60,6 +61,7 @@ print("Added Model Files for the gems")
 #Function Files
 function_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\function\acquire_gem"
 for i,mob in enumerate(minecraft_mobs):
+	if os.path.exists(os.path.join(function_path, f"{mob}.mcfunction")):		continue
 	with open(os.path.join(function_path, f"{mob}.mcfunction"), 'w') as f:
 		f.write(f"#Revoke the Advancement")
 		f.write(f"\nadvancement revoke @s only mob_gem:kill_mob/{mob}")
@@ -77,72 +79,72 @@ for i,mob in enumerate(minecraft_mobs):
 	with open(os.path.join(predicate_path, f"{mob}_gem\\holding_item.json"), 'w') as f:
 		json.dump(
 			{
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "type": "player",
-      "slots": {
-        "weapon.*": {
-          "items": "minecraft:warped_fungus_on_a_stick",
-          "components": {
-            "minecraft:custom_model_data": custom_model_data+i
-          }
-        }
-      }
-    }
-  },f,indent=4)
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"type": "player",
+			"slots": {
+				"weapon.*": {
+					"items": "minecraft:warped_fungus_on_a_stick",
+					"components": {
+						"minecraft:custom_model_data": custom_model_data+i
+					}
+				}
+			}
+		}
+	},f,indent=4)
 
 	with open(os.path.join(predicate_path, f"{mob}_gem\\has_item.json"), 'w') as f:
 		json.dump(
 			{
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "type": "minecraft:player",
-          "slots": {
-            "inventory.*": {
-              "items": "minecraft:warped_fungus_on_a_stick",
-              "components": {
-                "minecraft:custom_model_data": custom_model_data+i
-              }
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "type": "minecraft:player",
-          "slots": {
-            "hotbar.*": {
-              "items": "minecraft:warped_fungus_on_a_stick",
-              "components": {
-                "minecraft:custom_model_data": custom_model_data+i
-              }
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "type": "minecraft:player",
-          "slots": {
-            "weapon.offhand": {
-              "items": "minecraft:warped_fungus_on_a_stick",
-              "components": {
-                "minecraft:custom_model_data": custom_model_data+i
-              }
-            }
-          }
-        }
-      }
-    ]
-  },f,indent=4)
+		"condition": "minecraft:any_of",
+		"terms": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"type": "minecraft:player",
+					"slots": {
+						"inventory.*": {
+							"items": "minecraft:warped_fungus_on_a_stick",
+							"components": {
+								"minecraft:custom_model_data": custom_model_data+i
+							}
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"type": "minecraft:player",
+					"slots": {
+						"hotbar.*": {
+							"items": "minecraft:warped_fungus_on_a_stick",
+							"components": {
+								"minecraft:custom_model_data": custom_model_data+i
+							}
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"type": "minecraft:player",
+					"slots": {
+						"weapon.offhand": {
+							"items": "minecraft:warped_fungus_on_a_stick",
+							"components": {
+								"minecraft:custom_model_data": custom_model_data+i
+							}
+						}
+					}
+				}
+			}
+		]
+	},f,indent=4)
 		
 print("Created Predicates")

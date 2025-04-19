@@ -5,5 +5,8 @@ execute store result score mbGemTakeTrident mbGem_fakePlayer run clear @s triden
 
 #Return Gem
 execute if score mbGemTakeTrident mbGem_fakePlayer matches 1.. run item replace entity @s[predicate=mob_gem:drowned_gem/trident/holding_mainhand] weapon.mainhand with warped_fungus_on_a_stick[custom_model_data=523171,custom_data={mbGem:1b},lore=['{"color":"green","italic":false,"text":"Ability: Riptide"}','{"color":"aqua","italic":false,"text":"Perk: Increases Speed in Water"}'],custom_name='{"color":"#008c64","italic":false,"text":"Drowned Gem"}'] 1
-
 execute if score mbGemTakeTrident mbGem_fakePlayer matches 1.. run item replace entity @s[predicate=mob_gem:drowned_gem/trident/holding_offhand] weapon.offhand with warped_fungus_on_a_stick[custom_model_data=523171,custom_data={mbGem:1b},lore=['{"color":"green","italic":false,"text":"Ability: Riptide"}','{"color":"aqua","italic":false,"text":"Perk: Increases Speed in Water"}'],custom_name='{"color":"#008c64","italic":false,"text":"Drowned Gem"}'] 1
+
+#Clear Water
+execute if score mbGemTakeTrident mbGem_fakePlayer matches 1.. at @s run fill ~4 ~4 ~4 ~-4 ~-4 ~-4 air replace barrier
+execute if score mbGemTakeTrident mbGem_fakePlayer matches 1.. at @s run fill ~4 ~4 ~4 ~-4 ~-4 ~-4 air replace water

@@ -2,9 +2,7 @@
 scoreboard players reset @s mbGem_Click
 
 #Move
-summon wind_charge ~ ~ ~ {acceleration_power:0.1d,Motion:[0.0,0.0,0.0]}
-execute if predicate mob_gem:breeze_gem/variance run summon wind_charge ~ ~ ~ {acceleration_power:0.1d,Motion:[0.0,0.0,0.0]}
-summon wind_charge ~ ~ ~ {acceleration_power:0.1d,Motion:[0.0,-0.01,0.0]}
+execute rotated ~ 0 run function mob_gem:mob_gem/breeze/launch/1_spawn_windcharge
 
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 5
+scoreboard players set @s mbGem_AbilityCooldown 7

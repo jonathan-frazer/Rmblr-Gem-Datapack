@@ -25,6 +25,7 @@ scoreboard objectives add mbGemTrident used:trident
 
 #Warden
 scoreboard objectives add mbGemSonicBoom dummy
+scoreboard objectives add mbGemWardHeart dummy
 
 team add Intangible
 team modify Intangible collisionRule never

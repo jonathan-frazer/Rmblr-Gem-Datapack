@@ -1,7 +1,7 @@
 #Removes all Debuffs
 
 effect clear @s blindness
-#effect clear @s darkness
+effect clear @s darkness
 effect clear @s hunger
 effect clear @s infested
 effect clear @s unluck
@@ -13,7 +13,5 @@ effect clear @s poison
 effect clear @s wither
 effect clear @s mining_fatigue
 effect clear @s nausea
-
-#Didn't include Glowing and Levitation because they're dubious
-#Didn't include Trial Omen and Bad Omen since those could be a bother
-
+effect clear @s glowing
+effect clear @s levitation

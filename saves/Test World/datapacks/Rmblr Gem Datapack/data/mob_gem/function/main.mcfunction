@@ -49,5 +49,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0
 
+#Shulker
+    #Ability
+    execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s run function mob_gem:mob_gem/shulker/0
+
+
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident

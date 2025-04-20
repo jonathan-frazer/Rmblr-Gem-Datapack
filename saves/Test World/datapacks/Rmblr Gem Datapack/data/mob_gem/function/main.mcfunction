@@ -43,8 +43,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
         execute as @a[predicate=mob_gem:strider_gem/has_item,predicate=mob_gem:sneak,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run tp @s ~ ~-0.1 ~
         execute as @a[predicate=mob_gem:strider_gem/has_item,gamemode=!spectator] at @s if block ~ ~ ~ lava run effect give @s fire_resistance 1 0 true
 
-#
-
+#Enderman
+    #Perk
+    execute as @a[predicate=mob_gem:enderman_gem/has_item] at @s run function mob_gem:mob_gem/enderman/aggro/0_scan
+    #Ability
+    execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident

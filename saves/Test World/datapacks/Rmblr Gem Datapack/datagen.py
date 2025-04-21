@@ -7,6 +7,7 @@ minecraft_mobs = ['allay', 'armadillo', 'axolotl', 'bat', 'camel', 'cat', 'chick
 #Advancement
 advancement_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\advancement\kill_mob"
 for mob in minecraft_mobs:
+	if os.path.exists(os.path.join(advancement_path, f"{mob}.json")): continue
 	with open(os.path.join(advancement_path, f"{mob}.json"), 'w') as f:
 		json.dump({
 			"criteria": {
@@ -48,9 +49,8 @@ print("Wrote to the Warped Fungus File")
 #Model Files
 resource_pack_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item\mob_gem"
 for mob in minecraft_mobs:
-	if os.path.exists(os.path.join(resource_pack_path, f"{mob}.json")): continue
 	with open(os.path.join(resource_pack_path, f"{mob}.json"), 'w') as f:
-		json.dump({"parent": "minecraft:item/handheld",
+		json.dump({"parent": "minecraft:item/generated",
 		"textures": {
 		"layer0": f"item/mob_gem/{mob}"
 	},
@@ -74,8 +74,8 @@ print("Created Functions for Getting the Gems")
 #Predicate Files
 predicate_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\predicate"
 for i,mob in enumerate(minecraft_mobs):
-	if not os.path.exists(os.path.join(predicate_path, f"{mob}_gem")):
-		os.makedirs(os.path.join(predicate_path, f"{mob}_gem"))
+	if os.path.exists(os.path.join(predicate_path, f"{mob}_gem")):	continue
+		
 	with open(os.path.join(predicate_path, f"{mob}_gem\\holding_item.json"), 'w') as f:
 		json.dump(
 			{
@@ -148,3 +148,16 @@ for i,mob in enumerate(minecraft_mobs):
 	},f,indent=4)
 		
 print("Created Predicates")
+
+#Rename Textures
+texture_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\textures\item\mob_gem"
+
+for texture in os.listdir(texture_path):
+	if "_spawn_egg" in texture:
+		new_texture_name = texture.replace("_spawn_egg", "")
+		if(new_texture_name[:-4] not in minecraft_mobs): 
+			os.remove(os.path.join(texture_path, texture))
+		else:
+			os.rename(os.path.join(texture_path, texture), os.path.join(texture_path, new_texture_name))
+			
+print("Renamed Textures")

@@ -1,6 +1,10 @@
 #Item Invincibility
 execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.minecraft:custom_data.mbGem run data merge entity @s {Invulnerable:1b,Age:0,Tags:["mbGemitemInvul"]}
 
+#Allay
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:allay_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/allay/pickup_item/0_trigger
+
 #Armadillo
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:armadillo_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/armadillo/shield/0
@@ -33,11 +37,15 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGemSonicBoom=1..}] at @s run function mob_gem:mob_gem/warden/sonic_boom/1_dur
 
 #Strider
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:strider_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/strider/lava_spawn/0_trigger
+    execute as @e[type=area_effect_cloud,name="mbGem_LavaCluster"] at @s run function mob_gem:mob_gem/strider/lava_spawn/3_lava_cluster
+
     #Perk
         #Walk on Lava
-        execute as @a[tag=!mbGemStriderLava,predicate=mob_gem:strider_gem/has_item,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run function mob_gem:mob_gem/strider/on_lava
-        execute as @a[tag=mbGemStriderLava,predicate=mob_gem:strider_gem/has_item] at @s unless block ~ ~-0.5 ~ lava run function mob_gem:mob_gem/strider/off_lava
-        execute as @a[predicate=!mob_gem:strider_gem/has_item,tag=mbGemStriderLava] run function mob_gem:mob_gem/strider/off_lava
+        execute as @a[tag=!mbGemStriderLava,predicate=mob_gem:strider_gem/has_item,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run function mob_gem:mob_gem/strider/lava_walk/on_lava
+        execute as @a[tag=mbGemStriderLava,predicate=mob_gem:strider_gem/has_item] at @s unless block ~ ~-0.5 ~ lava run function mob_gem:mob_gem/strider/lava_walk/off_lava
+        execute as @a[predicate=!mob_gem:strider_gem/has_item,tag=mbGemStriderLava] run function mob_gem:mob_gem/strider/lava_walk/off_lava
 
         #Sink in Lava
         execute as @a[predicate=mob_gem:strider_gem/has_item,predicate=mob_gem:sneak,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run tp @s ~ ~-0.1 ~
@@ -47,12 +55,16 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Perk
     execute as @a[predicate=mob_gem:enderman_gem/has_item] at @s run function mob_gem:mob_gem/enderman/aggro/0_scan
     #Ability
-    execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0
+    execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0
 
 #Shulker
     #Ability
-    execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s run function mob_gem:mob_gem/shulker/0
+    execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/shulker/0
 
+#Creeper
+    #Ability
+    execute as @a[predicate=mob_gem:creeper_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/creeper/0_trigger
+    execute as @a[scores={mbGemExplosionTime=1..}] run function mob_gem:mob_gem/creeper/1_dur
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident

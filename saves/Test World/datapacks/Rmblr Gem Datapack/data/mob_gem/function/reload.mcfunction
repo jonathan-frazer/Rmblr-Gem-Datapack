@@ -12,6 +12,9 @@ data modify storage mob_gem:allay StolenItems.MobItem set value {}
 #Armadillo
 scoreboard objectives add mbGemArmadilloShield dummy
 
+#Creeper
+scoreboard objectives add mbGemExplosionTime dummy
+
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy
 

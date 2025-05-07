@@ -1,5 +1,7 @@
 #Set Score
 scoreboard players set @s mbGemSonicBoom 1
+#Apply Cooldown
+scoreboard players set @s mbGem_AbilityCooldown 17
 
 #Playsound
 execute at @s run playsound block.beacon.activate master @a[distance=..32] ^ ^0.75 ^1 0.75 2 0.75

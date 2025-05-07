@@ -60,11 +60,17 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 #Shulker
     #Ability
     execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/shulker/0
+#Cat
+    #Ability
+    execute as @a[predicate=mob_gem:cat_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/cat/scare/0_trigger
+    execute as @e[type=!#mob_gem:nalive,scores={mbGemScareTimer=1..}] at @s run function mob_gem:mob_gem/cat/scare/3_dur
 
 #Creeper
     #Ability
     execute as @a[predicate=mob_gem:creeper_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/creeper/0_trigger
     execute as @a[scores={mbGemExplosionTime=1..}] run function mob_gem:mob_gem/creeper/1_dur
+
+
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident

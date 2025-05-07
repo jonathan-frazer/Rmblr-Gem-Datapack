@@ -15,6 +15,9 @@ scoreboard objectives add mbGemArmadilloShield dummy
 #Creeper
 scoreboard objectives add mbGemExplosionTime dummy
 
+#Cat
+scoreboard objectives add mbGemScareTimer dummy
+
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy
 

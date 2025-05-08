@@ -9,5 +9,8 @@ advancement revoke @s only mob_gem:player_atk
 #Wither Skeleton
     execute if predicate mob_gem:wither_skeleton_gem/has_item as @e[type=!#mob_gem:nalive,distance=0.5..7,nbt={HurtTime:10s}] run function mob_gem:mob_gem/wither_skeleton/atk
 
+#Cave Spider
+    execute if predicate mob_gem:cave_spider_gem/has_item as @e[type=!#mob_gem:nalive,distance=0.5..7,nbt={HurtTime:10s}] run function mob_gem:mob_gem/cave_spider/poison_aspect/atk
+
 #Wither 
     execute if predicate mob_gem:wither_gem/has_item as @e[type=!#mob_gem:nalive,distance=0.5..7,nbt={HurtTime:10s}] run function mob_gem:mob_gem/wither/atk

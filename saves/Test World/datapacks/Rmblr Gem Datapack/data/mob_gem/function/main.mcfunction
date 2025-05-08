@@ -70,7 +70,27 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:creeper_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/creeper/0_trigger
     execute as @a[scores={mbGemExplosionTime=1..}] run function mob_gem:mob_gem/creeper/1_dur
 
+#Piglin Brute
+    #Ability
+    execute as @a[predicate=mob_gem:piglin_brute_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/0_trigger
+    execute as @e[type=armor_stand,name="mbGemTomohawkI"] run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/3_dur
 
+#Spider
+    #Ability
+    execute as @a[predicate=mob_gem:spider_gem/holding_item] at @s run function mob_gem:mob_gem/spider/wall_climb/0
+    #Perk
+    execute as @a[predicate=mob_gem:spider_gem/has_item,predicate=mob_gem:spider_gem/slowed_by_web] at @s run function mob_gem:mob_gem/spider/cobweb_immunity/0
+
+
+#Cave Spider
+    #Ability
+    execute as @a[predicate=mob_gem:cave_spider_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/cave_spider/web_bomb/0_aim
+    execute as @e[type=falling_block,name="webBombBlock"] at @s unless block ~ ~-0.5 ~ #mob_gem:passable run function mob_gem:mob_gem/cave_spider/web_bomb/2_lay
+    execute as @e[type=area_effect_cloud,name="mbWebBombPrimer"] run function mob_gem:mob_gem/cave_spider/web_bomb/3_incubate
+
+#Dolphin
+    #Ability
+    execute as @a[predicate=mob_gem:dolphin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes as @e[distance=..6,type=!#mob_gem:nalive,predicate=!mob_gem:dolphin_gem/holding_item] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[predicate=mob_gem:dolphin_gem/holding_item] positioned ^ ^ ^-1 if entity @p[distance=..0.35,predicate=mob_gem:dolphin_gem/holding_item] positioned ^ ^ ^1 run function mob_gem:mob_gem/dolphin/bestow_grace
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident

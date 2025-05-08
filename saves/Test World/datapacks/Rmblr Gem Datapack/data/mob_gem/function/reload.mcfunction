@@ -33,6 +33,18 @@ scoreboard objectives add mbGemTrident used:trident
 scoreboard objectives add mbGemSonicBoom dummy
 scoreboard objectives add mbGemWardHeart dummy
 
+#Piglin Brute
+scoreboard objectives add mbGemAxePhase dummy
+
+#Cave Spider
+scoreboard objectives add ThrowX dummy
+scoreboard objectives add ThrowY dummy
+scoreboard objectives add ThrowZ dummy
+scoreboard objectives add OriginX dummy
+scoreboard objectives add OriginY dummy
+scoreboard objectives add OriginZ dummy
+scoreboard players set One ThrowY 1
+
 team add Intangible
 team modify Intangible collisionRule never
 

@@ -1,0 +1,1 @@
+$summon armor_stand ^ ^1 ^ {Rotation:[$(yaw)f,$(pitch)f],ArmorItems:[{},{},{},{id:"minecraft:golden_axe",count:1b}],Pose:{Head:[0f,0f,1f]},Marker:1b,Invisible:1b,NoGravity:1b,CustomName:'{"text":"mbGemTomohawkI"}'}

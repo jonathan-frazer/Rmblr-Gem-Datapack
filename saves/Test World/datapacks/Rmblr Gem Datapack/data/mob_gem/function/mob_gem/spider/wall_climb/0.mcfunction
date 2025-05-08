@@ -1,0 +1,2 @@
+execute anchored eyes unless block ^ ^ ^0.5 #mob_gem:passable run effect give @s[predicate=!mob_gem:spider_gem/wall_climbing] levitation 1 4 true
+execute anchored eyes if block ^ ^ ^0.5 #mob_gem:passable run effect clear @s[predicate=mob_gem:spider_gem/wall_climbing] levitation

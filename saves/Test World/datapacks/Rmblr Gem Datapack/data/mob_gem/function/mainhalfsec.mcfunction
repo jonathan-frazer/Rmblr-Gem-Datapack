@@ -25,6 +25,11 @@
     execute as @a[predicate=!mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
     execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:piglin_brute_gem/holding_gold_tool] run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
 
+#Rabbit
+    #Perk
+    execute as @a[predicate=mob_gem:rabbit_gem/has_item,tag=!mbGemRabbitJB] run function mob_gem:mob_gem/rabbit/jump_boost/apply
+    execute as @a[predicate=!mob_gem:rabbit_gem/has_item,tag=mbGemRabbitJB] run function mob_gem:mob_gem/rabbit/jump_boost/remove
+
 #Salmon
     #Perk
     execute as @a[predicate=mob_gem:salmon_gem/has_item] at @s anchored eyes run function mob_gem:mob_gem/salmon/haste

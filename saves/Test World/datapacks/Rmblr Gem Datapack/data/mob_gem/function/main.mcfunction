@@ -70,6 +70,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:creeper_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/creeper/0_trigger
     execute as @a[scores={mbGemExplosionTime=1..}] run function mob_gem:mob_gem/creeper/1_dur
 
+#Pig
+    #Ability
+    execute as @a[predicate=mob_gem:pig_gem/holding_item,scores={mbGem_Click=1..3}] if predicate mob_gem:pig_gem/can_burrow at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pig/burrow/0_trigger
+    execute as @a[scores={mbGemBurrow=1..}] run function mob_gem:mob_gem/pig/burrow/1_dur
+
 #Piglin Brute
     #Ability
     execute as @a[predicate=mob_gem:piglin_brute_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/0_trigger
@@ -81,6 +86,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Perk
     execute as @a[predicate=mob_gem:spider_gem/has_item,predicate=mob_gem:spider_gem/slowed_by_web] at @s run function mob_gem:mob_gem/spider/cobweb_immunity/0
 
+#Rabbit
+    #Ability
+    execute as @a[predicate=mob_gem:rabbit_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:on_ground] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/rabbit/leap/0_trigger
+    execute as @a[scores={mbGemLeap=1..}] run function mob_gem:mob_gem/rabbit/leap/1_dur with storage mob_gem:auxillary rabbit
 
 #Cave Spider
     #Ability

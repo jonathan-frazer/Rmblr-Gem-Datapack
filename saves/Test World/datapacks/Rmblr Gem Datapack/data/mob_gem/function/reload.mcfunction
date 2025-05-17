@@ -18,16 +18,24 @@ scoreboard objectives add mbGemExplosionTime dummy
 #Cat
 scoreboard objectives add mbGemScareTimer dummy
 
+#Drowned
+scoreboard objectives add mbGemRiptide dummy
+scoreboard objectives add mbGemTrident used:trident
+
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy
+
+#Pig
+scoreboard objectives add mbGemBurrow dummy
+
+#Rabbit
+scoreboard objectives add mbGemLeap dummy
 
 #Sheep
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
 
-#Drowned
-scoreboard objectives add mbGemRiptide dummy
-scoreboard objectives add mbGemTrident used:trident
+
 
 #Warden
 scoreboard objectives add mbGemSonicBoom dummy

@@ -1,0 +1,18 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "slots": {
+        "weapon.mainhand": {
+          "items": [
+            "minecraft:iron_axe",
+            "minecraft:iron_sword",
+            "minecraft:iron_pickaxe",
+            "minecraft:iron_shovel",
+            "minecraft:iron_hoe"
+          ]
+        }
+      }
+    }
+  }

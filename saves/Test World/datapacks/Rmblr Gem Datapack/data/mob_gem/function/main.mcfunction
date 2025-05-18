@@ -46,6 +46,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0
 
+#Evoker
+    #Ability
+    execute as @a[predicate=mob_gem:evoker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/evoker/fangs/0
+
 #Parrot
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:parrot_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/parrot/0
@@ -60,6 +64,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:piglin_brute_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/0_trigger
     execute as @e[type=armor_stand,name="mbGemTomohawkI"] run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/3_dur
+
+#Pillager
+    #Ability
+    execute as @a[predicate=mob_gem:pillager_gem/has_item,scores={mbGemCrossbow=1..3},predicate=!mob_gem:sneak] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pillager/aimbot/0
 
 #Rabbit
     #Ability
@@ -101,6 +109,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:vindicator_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/vindicator/tomohawk_throw/0_trigger
     execute as @e[type=armor_stand,name="mbGemTomohawkII"] at @s run function mob_gem:mob_gem/vindicator/tomohawk_throw/2_dur
 
+#Vex
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:vex_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/vex/rage/0_trigger
+
 #Warden
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:warden_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/warden/sonic_boom/0_activate
@@ -109,3 +121,4 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident
+scoreboard players reset @a mbGemCrossbow

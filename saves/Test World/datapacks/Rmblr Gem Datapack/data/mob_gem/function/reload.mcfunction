@@ -28,14 +28,15 @@ scoreboard objectives add mbGemDJumptimer dummy
 #Pig
 scoreboard objectives add mbGemBurrow dummy
 
+#Pillager
+scoreboard objectives add mbGemCrossbow used:crossbow
+
 #Rabbit
 scoreboard objectives add mbGemLeap dummy
 
 #Sheep
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
-
-
 
 #Warden
 scoreboard objectives add mbGemSonicBoom dummy

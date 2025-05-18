@@ -1,0 +1,23 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "effects": {
+        "minecraft:strength": {
+          "amplifier": 4,
+          "duration": {
+            "max": 100
+          },
+          "visible": true
+        },
+        "minecraft:speed": {
+          "amplifier": 4,
+          "duration": {
+            "max": 100
+          },
+          "visible": true
+        }
+      }
+    }
+  }

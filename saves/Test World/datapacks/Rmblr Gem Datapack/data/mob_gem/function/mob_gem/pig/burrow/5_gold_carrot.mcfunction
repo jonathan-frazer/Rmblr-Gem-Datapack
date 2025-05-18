@@ -1,0 +1,1 @@
+$give @s golden_carrot $(gold_carrot_count) 

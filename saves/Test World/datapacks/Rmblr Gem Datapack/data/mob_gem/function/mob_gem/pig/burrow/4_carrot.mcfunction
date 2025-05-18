@@ -1,0 +1,1 @@
+$give @s carrot $(carrot_count) 

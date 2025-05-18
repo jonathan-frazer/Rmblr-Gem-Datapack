@@ -47,16 +47,18 @@
 
 #Vex
     #Perk
-    execute as @a[predicate=mob_gem:vex_gem/has_item] positioned as @s run function mob_gem:mob_gem/vex/suffocation_regen/0
+    execute as @a[predicate=mob_gem:vex_gem/has_item,tag=!mbGemSwordBoost] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vex_gem/holding_sword] run function mob_gem:mob_gem/vex/sword_boost/apply
+    execute as @a[predicate=!mob_gem:vex_gem/has_item,tag=mbGemSwordBoost] run function mob_gem:mob_gem/vex/sword_boost/remove
+    execute as @a[predicate=mob_gem:vex_gem/has_item,tag=mbGemSwordBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vex_gem/holding_sword] run function mob_gem:mob_gem/vex/sword_boost/remove
     
     #Ability
     tag @a[tag=mbGemVexCharge,predicate=!mob_gem:vex_gem/raging] remove mbGemVexCharge 
 
 #Vindicator
     #Perk
-    execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=!mbGemIronBoost] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_iron_tool] run function mob_gem:mob_gem/vindicator/iron_boost/apply
-    execute as @a[predicate=!mob_gem:vindicator_gem/has_item,tag=mbGemIronBoost] run function mob_gem:mob_gem/vindicator/iron_boost/remove
-    execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=mbGemIronBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_iron_tool] run function mob_gem:mob_gem/vindicator/iron_boost/remove
+    execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=!mbGemAxeBoost] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_axe] run function mob_gem:mob_gem/vindicator/axe_boost/apply
+    execute as @a[predicate=!mob_gem:vindicator_gem/has_item,tag=mbGemAxeBoost] run function mob_gem:mob_gem/vindicator/axe_boost/remove
+    execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=mbGemAxeBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_axe] run function mob_gem:mob_gem/vindicator/axe_boost/remove
 
 #Warden
     #Ability

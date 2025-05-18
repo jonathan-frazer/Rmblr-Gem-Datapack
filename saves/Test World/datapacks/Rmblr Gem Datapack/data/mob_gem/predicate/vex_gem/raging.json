@@ -5,14 +5,14 @@
       "type": "minecraft:player",
       "effects": {
         "minecraft:strength": {
-          "amplifier": 4,
+          "amplifier": 3,
           "duration": {
             "max": 100
           },
           "visible": true
         },
         "minecraft:speed": {
-          "amplifier": 4,
+          "amplifier": 3,
           "duration": {
             "max": 100
           },

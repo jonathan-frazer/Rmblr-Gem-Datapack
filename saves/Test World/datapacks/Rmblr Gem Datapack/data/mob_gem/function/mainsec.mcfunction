@@ -30,7 +30,6 @@ scoreboard players remove @a[scores={mbGem_AbilityCooldown=1..}] mbGem_AbilityCo
     #Perk
     execute as @a[predicate=mob_gem:sheep_gem/has_item] run function mob_gem:mob_gem/sheep/sleep_anyone/0
 
-
 #Warden
     #Perk
     execute as @a[predicate=mob_gem:warden_gem/has_item] run function mob_gem:mob_gem/warden/immunity/remove_effects

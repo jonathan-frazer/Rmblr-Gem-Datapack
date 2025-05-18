@@ -3,4 +3,4 @@
 particle crit ~ ~1.75 ~ 0.2 0.2 0.2 0.1 1 force
 
 #Damage
-damage @s 5.0 player_attack by @p[predicate=mob_gem:piglin_brute_gem/holding_item]
+damage @s 5.0 player_attack by @p[predicate=mob_gem:piglin_brute_gem/has_item]

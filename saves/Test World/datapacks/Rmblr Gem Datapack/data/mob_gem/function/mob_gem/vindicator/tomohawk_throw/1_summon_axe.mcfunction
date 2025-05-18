@@ -1,0 +1,2 @@
+#Spawn Axe
+$summon armor_stand ^ ^ ^1.5 {Pose:{Head:[90f,0f,0f]},Rotation:[$(yaw)f,$(pitch)f],ArmorItems:[{},{},{},{id:"minecraft:iron_axe",count:1}],Marker:1b,Invisible:1b,NoGravity:1b,CustomName:'{"text":"mbGemTomohawkII"}'}

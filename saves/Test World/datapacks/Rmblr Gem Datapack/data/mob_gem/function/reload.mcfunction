@@ -15,12 +15,18 @@ scoreboard objectives add mbGemArmadilloShield dummy
 #Creeper
 scoreboard objectives add mbGemExplosionTime dummy
 
+#Camel
+scoreboard objectives add mbGem_camelGrow dummy
+
 #Cat
 scoreboard objectives add mbGemScareTimer dummy
 
 #Drowned
 scoreboard objectives add mbGemRiptide dummy
 scoreboard objectives add mbGemTrident used:trident
+
+#Fox
+scoreboard objectives add mbGem_foxPounce dummy
 
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy

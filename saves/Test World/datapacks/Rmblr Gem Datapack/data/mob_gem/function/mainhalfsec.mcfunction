@@ -1,3 +1,10 @@
+#Bat
+    #Perk
+    execute as @a[predicate=mob_gem:bat_gem/has_item,predicate=mob_gem:bat_gem/underground] run function mob_gem:mob_gem/bat/night_vision/apply
+    execute as @a[predicate=mob_gem:bat_gem/has_item,predicate=!mob_gem:bat_gem/underground,predicate=mob_gem:bat_gem/has_night_vision] run function mob_gem:mob_gem/bat/night_vision/remove
+    execute as @a[predicate=!mob_gem:bat_gem/has_item,predicate=mob_gem:bat_gem/has_night_vision] run function mob_gem:mob_gem/bat/night_vision/remove
+
+
 #Breeze
     #Perk
     execute as @a[predicate=mob_gem:breeze_gem/has_item,tag=!mbGemBreezePad] run function mob_gem:mob_gem/breeze/remove_fall_dmg/apply
@@ -8,6 +15,14 @@
     execute as @a[predicate=mob_gem:cat_gem/has_item,tag=!mbGemCatScurry] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:cat_gem/chasing] run function mob_gem:mob_gem/cat/scurry/apply
     execute as @a[predicate=!mob_gem:cat_gem/has_item,tag=mbGemCatScurry] run function mob_gem:mob_gem/cat/scurry/remove
     execute as @a[predicate=mob_gem:cat_gem/has_item,tag=mbGemCatScurry] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:cat_gem/chasing] run function mob_gem:mob_gem/cat/scurry/remove
+
+#Camel
+    #Ability
+    execute as @a[scores={mbGem_camelGrow=1..}] run function mob_gem:mob_gem/camel/grow/1_dur
+
+    #Perk
+    execute as @a[predicate=mob_gem:camel_gem/has_item] if predicate mob_gem:camel_gem/holding_cactus run function mob_gem:mob_gem/camel/cactus_eat/apply
+    execute as @a[predicate=!mob_gem:camel_gem/has_item] if predicate mob_gem:camel_gem/holding_cactus run function mob_gem:mob_gem/camel/cactus_eat/remove
 
 #Cod
     #Perk

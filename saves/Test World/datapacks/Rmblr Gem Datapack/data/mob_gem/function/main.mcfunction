@@ -10,9 +10,17 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:armadillo_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/armadillo/shield/0
     execute as @a[scores={mbGemArmadilloShield=1..}] at @s run function mob_gem:mob_gem/armadillo/shield/1
 
+#Bat
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:bat_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/bat/echolocation/0_trigger
+
 #Breeze
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:breeze_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. if predicate mob_gem:on_ground at @s run function mob_gem:mob_gem/breeze/launch/0
+    
+#Camel
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:camel_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/camel/grow/0_trigger
 
 #Cat
     #Ability

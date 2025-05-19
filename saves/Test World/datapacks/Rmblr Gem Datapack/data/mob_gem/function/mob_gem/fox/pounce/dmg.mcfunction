@@ -1,0 +1,1 @@
+$damage @s $(dmg) player_attack

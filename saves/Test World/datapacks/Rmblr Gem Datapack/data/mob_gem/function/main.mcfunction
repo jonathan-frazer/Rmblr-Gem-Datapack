@@ -14,6 +14,12 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:bat_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/bat/echolocation/0_trigger
 
+#Bee
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:bee_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/bee/swarm/0_trigger
+    execute as @a[tag=mbGemBeeSpawning] at @s run function mob_gem:mob_gem/bee/swarm/2_bee_spawning
+    execute as @e[type=bee,name=GemBeeSpawn] run function mob_gem:mob_gem/bee/swarm/4_bee_dur
+
 #Breeze
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:breeze_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. if predicate mob_gem:on_ground at @s run function mob_gem:mob_gem/breeze/launch/0

@@ -1,0 +1,1 @@
+execute as @a[tag=mbGemFoxPad] run function mob_gem:mob_gem/fox/pounce/7_pad

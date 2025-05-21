@@ -29,6 +29,12 @@
     execute as @a[predicate=mob_gem:cod_gem/has_item] at @s anchored eyes run function mob_gem:mob_gem/cod/vision
     execute as @a[predicate=!mob_gem:cod_gem/has_item,predicate=mob_gem:cod_gem/vision_effect] run effect clear @s night_vision
 
+#Donkey
+    #Perk
+    execute as @a[predicate=mob_gem:donkey_gem/has_item,tag=!mbGemDonkeyHeight] run function mob_gem:mob_gem/donkey/step_height/apply
+    execute as @a[predicate=!mob_gem:donkey_gem/has_item,tag=mbGemDonkeyHeight] run function mob_gem:mob_gem/donkey/step_height/remove
+
+
 #Drowned
     #Perk
     execute as @a[predicate=mob_gem:drowned_gem/has_item,tag=!mbGemDrownedWater] run function mob_gem:mob_gem/drowned/water_speed/apply
@@ -37,6 +43,11 @@
 #Evoker
     #Perk
     execute as @a[predicate=mob_gem:evoker_gem/has_item] positioned as @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] positioned as @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate
+
+#Horse
+    #Perk
+    execute as @a[predicate=mob_gem:horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/apply
+    execute as @a[predicate=!mob_gem:horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/remove
 
 #Piglin Brute
     #Perk

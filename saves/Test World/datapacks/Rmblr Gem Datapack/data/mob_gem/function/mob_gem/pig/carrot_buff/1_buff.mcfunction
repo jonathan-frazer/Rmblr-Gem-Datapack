@@ -1,5 +1,5 @@
 #Buffs
-$effect give @s strength $(count) 0 false
+$effect give @s strength $(Carrotcount) 0 false
 
 #Cooldown
 scoreboard players set @s mbGem_AbilityCooldown 10

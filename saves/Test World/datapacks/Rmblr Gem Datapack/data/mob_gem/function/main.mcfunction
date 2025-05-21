@@ -39,6 +39,16 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @e[type=falling_block,name="webBombBlock"] at @s unless block ~ ~-0.5 ~ #mob_gem:passable run function mob_gem:mob_gem/cave_spider/web_bomb/2_lay
     execute as @e[type=area_effect_cloud,name="mbWebBombPrimer"] run function mob_gem:mob_gem/cave_spider/web_bomb/3_incubate
 
+#Chicken
+    #Ability
+    execute as @a[predicate=mob_gem:chicken_gem/holding_item,scores={mbGem_Click=1..3,mbGemChickenFlaps=1..}] positioned as @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/chicken/flap/0_trigger
+    execute as @a[tag=mbGemChickenFlap,predicate=mob_gem:chicken_gem/flap_lift] run function mob_gem:mob_gem/chicken/flap/1_clear_lift
+    execute as @a[predicate=mob_gem:chicken_gem/has_item,predicate=mob_gem:on_ground] run scoreboard players set @s mbGemChickenFlaps 5 
+    #Perk
+    execute as @a[predicate=mob_gem:chicken_gem/holding_item] run function mob_gem:mob_gem/chicken/slowfall/apply
+    execute as @a[predicate=!mob_gem:chicken_gem/holding_item] run function mob_gem:mob_gem/chicken/slowfall/remove
+    
+
 #Creeper
     #Ability
     execute as @a[predicate=mob_gem:creeper_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/creeper/0_trigger
@@ -48,6 +58,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:dolphin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes as @e[distance=..6,type=!#mob_gem:nalive,predicate=!mob_gem:dolphin_gem/holding_item] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[predicate=mob_gem:dolphin_gem/holding_item] positioned ^ ^ ^-1 if entity @p[distance=..0.35,predicate=mob_gem:dolphin_gem/holding_item] positioned ^ ^ ^1 run function mob_gem:mob_gem/dolphin/bestow_grace
 
+#Donkey
+    #Ability
+    execute as @a[predicate=mob_gem:donkey_gem/holding_item,predicate=mob_gem:sneak] positioned as @s unless entity @n[type=marker,name="mbGemPersonalStorage",distance=..1.5] run function mob_gem:mob_gem/donkey/personal_storage/0_spawn
+    execute as @e[type=marker,name="mbGemPersonalStorage"] positioned as @s run function mob_gem:mob_gem/donkey/personal_storage/1_despawn
 #Drowned
     #Ability 
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:drowned_gem/holding_item] unless dimension minecraft:the_nether unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/drowned/riptide/0
@@ -69,6 +83,18 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:fox_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/fox/pounce/0
     execute as @a[scores={mbGem_foxPounce=1..}] at @s run function mob_gem:mob_gem/fox/pounce/4_dur
 
+#Horse
+    #Ability
+    execute as @a[predicate=mob_gem:horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/horse/ride/0
+    execute as @a[scores={mbGem_nonHorseRide=1..}] positioned as @s run function mob_gem:mob_gem/horse/ride/3_dur
+
+#MooshRoom
+    #Ability
+    execute as @a[predicate=mob_gem:mooshroom_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/mooshroom/super_stew/0_trigger
+    #Perk
+    execute as @a[predicate=mob_gem:mooshroom_gem/has_item,predicate=mob_gem:mooshroom_gem/holding_sus_stew,predicate=!mob_gem:mooshroom_gem/holding_super_stew] run function mob_gem:mob_gem/mooshroom/reveal/0
+    
+
 #Parrot
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:parrot_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/parrot/0
@@ -87,6 +113,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 #Pillager
     #Ability
     execute as @a[predicate=mob_gem:pillager_gem/has_item,scores={mbGemCrossbow=1..3},predicate=!mob_gem:sneak] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pillager/aimbot/0
+
+#Pufferfish
+    #Ability
+    execute as @a[predicate=mob_gem:pufferfish_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pufferfish/poison_spike/0_trigger
 
 #Rabbit
     #Ability

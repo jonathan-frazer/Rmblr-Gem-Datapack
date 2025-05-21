@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "type": "player",
+        "slots": {
+            "weapon.mainhand": {
+                "items": "minecraft:suspicious_stew"
+            }
+        }
+    }
+}

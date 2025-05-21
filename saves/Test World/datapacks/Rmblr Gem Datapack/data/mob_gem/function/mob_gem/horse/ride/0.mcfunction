@@ -1,0 +1,2 @@
+#Activate
+execute at @s anchored eyes as @e[distance=..6,type=!#mob_gem:nalive,type=!player] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[predicate=mob_gem:horse_gem/holding_item] positioned ^ ^ ^-1 if entity @p[distance=..0.45,predicate=mob_gem:horse_gem/holding_item] positioned ^ ^ ^1 run function mob_gem:mob_gem/horse/ride/1

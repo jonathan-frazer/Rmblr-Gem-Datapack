@@ -1,0 +1,2 @@
+#Activate
+execute at @s anchored eyes as @e[distance=..4,type=!#mob_gem:nalive,predicate=!mob_gem:frog_gem/holding_item,tag=!mbGemFrogTongue] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[predicate=mob_gem:frog_gem/holding_item] positioned ^ ^ ^-1 if entity @p[distance=..0.45,predicate=mob_gem:frog_gem/holding_item] positioned ^ ^ ^1 run function mob_gem:mob_gem/frog/tongue/1

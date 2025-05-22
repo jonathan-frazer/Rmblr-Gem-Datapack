@@ -78,6 +78,18 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:evoker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/evoker/fangs/0
 
+#Frog
+    #Ability
+    execute as @a[predicate=mob_gem:frog_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/frog/tongue/0
+    execute as @e[type=!#mob_gem:nalive,tag=mbGemFrogTarget] at @s run function mob_gem:mob_gem/frog/tongue/3_dur
+    execute as @e[type=!#mob_gem:nalive,tag=mbGemTurnedFrog] at @s run function mob_gem:mob_gem/frog/tongue/5_frog_dur
+    #Perk
+    execute as @a[predicate=mob_gem:frog_gem/has_item,tag=!mbGemFrogJumpBoost] if predicate mob_gem:sneak run function mob_gem:mob_gem/frog/sneakjump/apply
+    execute as @a[predicate=!mob_gem:frog_gem/has_item,tag=mbGemFrogJumpBoost] run function mob_gem:mob_gem/frog/sneakjump/remove
+    execute as @a[predicate=mob_gem:frog_gem/has_item,tag=mbGemFrogJumpBoost] unless predicate mob_gem:sneak run function mob_gem:mob_gem/frog/sneakjump/remove
+    execute as @a[predicate=mob_gem:frog_gem/has_item,predicate=mob_gem:sneak,scores={mbGemjumpCount=1..}] run function mob_gem:mob_gem/frog/sneakjump/jump/0
+    execute as @a[tag=mbGemFrogPad,predicate=mob_gem:on_ground] run function mob_gem:mob_gem/frog/sneakjump/jump/1
+
 #Fox
     #Ability
     execute as @a[predicate=mob_gem:fox_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/fox/pounce/0
@@ -138,6 +150,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/shulker/0
 
+#Sniffer
+    #Ability
+    execute as @a[predicate=mob_gem:sniffer_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/sniffer/burrow/0_trigger
+    execute as @a[scores={mbGem_snifferBurrow=1..}] at @s run function mob_gem:mob_gem/sniffer/burrow/1_dur
+
 #Strider
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:strider_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/strider/lava_spawn/0_trigger
@@ -171,3 +188,4 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident
 scoreboard players reset @a mbGemCrossbow
+scoreboard players reset @a mbGemjumpCount

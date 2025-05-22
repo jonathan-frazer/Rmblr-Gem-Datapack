@@ -34,7 +34,6 @@
     execute as @a[predicate=mob_gem:donkey_gem/has_item,tag=!mbGemDonkeyHeight] run function mob_gem:mob_gem/donkey/step_height/apply
     execute as @a[predicate=!mob_gem:donkey_gem/has_item,tag=mbGemDonkeyHeight] run function mob_gem:mob_gem/donkey/step_height/remove
 
-
 #Drowned
     #Perk
     execute as @a[predicate=mob_gem:drowned_gem/has_item,tag=!mbGemDrownedWater] run function mob_gem:mob_gem/drowned/water_speed/apply
@@ -43,7 +42,7 @@
 #Evoker
     #Perk
     execute as @a[predicate=mob_gem:evoker_gem/has_item] positioned as @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] positioned as @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate
-
+ 
 #Horse
     #Perk
     execute as @a[predicate=mob_gem:horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/apply
@@ -51,9 +50,9 @@
 
 #Piglin Brute
     #Perk
-    execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=!mbGemGoldBoost] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:piglin_brute_gem/holding_gold_tool] run function mob_gem:mob_gem/piglin_brute/gold_boost/apply
+    execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=!mbGemGoldBoost] if predicate mob_gem:piglin_brute_gem/holding_gold_tool run function mob_gem:mob_gem/piglin_brute/gold_boost/apply
     execute as @a[predicate=!mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
-    execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:piglin_brute_gem/holding_gold_tool] run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
+    execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] unless predicate mob_gem:piglin_brute_gem/holding_gold_tool run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
 
 #Rabbit
     #Perk
@@ -64,6 +63,12 @@
     #Perk
     execute as @a[predicate=mob_gem:salmon_gem/has_item] at @s anchored eyes run function mob_gem:mob_gem/salmon/haste
     execute as @a[predicate=!mob_gem:salmon_gem/has_item,predicate=mob_gem:salmon_gem/haste_effect] run effect clear @s haste
+
+#Sniffer
+    #Perk
+    execute as @a[predicate=mob_gem:sniffer_gem/has_item,tag=!mbGemSnifferSturdy] run function mob_gem:mob_gem/sniffer/sturdy/apply
+    execute as @a[predicate=!mob_gem:sniffer_gem/has_item,tag=mbGemSnifferSturdy] run function mob_gem:mob_gem/sniffer/sturdy/remove
+
 
 #Tropical Fish
     #Perk

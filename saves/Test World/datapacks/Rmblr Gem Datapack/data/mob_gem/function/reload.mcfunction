@@ -4,6 +4,8 @@ scoreboard objectives add mbGem_fakePlayer dummy
 scoreboard objectives add mbGem_Click used:warped_fungus_on_a_stick
 scoreboard objectives add mbGem_AbilityCooldown dummy
 scoreboard objectives add mbGem_CleanUp dummy
+scoreboard objectives add previousGameType dummy
+scoreboard objectives add mbGemjumpCount minecraft.custom:jump
 
 #Allay
 scoreboard players set mbGemStealOffset mbGem_fakePlayer 8
@@ -31,14 +33,14 @@ scoreboard objectives add mbGemTrident used:trident
 #Fox
 scoreboard objectives add mbGem_foxPounce dummy
 
+#Frog
+scoreboard objectives add mbGemFrogpull dummy
+
 #Horse
 scoreboard objectives add mbGem_nonHorseRide dummy
 
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy
-
-#Pig
-scoreboard objectives add mbGemBurrow dummy
 
 #Pillager
 scoreboard objectives add mbGemCrossbow used:crossbow
@@ -49,6 +51,9 @@ scoreboard objectives add mbGemLeap dummy
 #Sheep
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
+
+#Sniffer
+scoreboard objectives add mbGem_snifferBurrow dummy
 
 #Warden
 scoreboard objectives add mbGemSonicBoom dummy
@@ -65,6 +70,7 @@ scoreboard objectives add OriginX dummy
 scoreboard objectives add OriginY dummy
 scoreboard objectives add OriginZ dummy
 scoreboard players set One ThrowY 1
+
 
 team add Intangible
 team modify Intangible collisionRule never

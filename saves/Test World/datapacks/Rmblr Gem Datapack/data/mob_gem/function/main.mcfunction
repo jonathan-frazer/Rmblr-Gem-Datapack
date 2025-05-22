@@ -113,6 +113,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGemDJumptimer=1..}] at @s run function mob_gem:mob_gem/parrot/1
     effect clear @a[predicate=mob_gem:parrot_gem/should_clear_effect] slow_falling
 
+#Phantom
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:phantom_gem/holding_item,predicate=!mob_gem:on_ground] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/phantom/glide/0_trigger
+    execute as @a[tag=mbGemPhantomGlide] at @s run function mob_gem:mob_gem/phantom/glide/1_dur
+
 #Pig
     #Ability
     execute as @a[predicate=mob_gem:pig_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pig/carrot_buff/0_trigger

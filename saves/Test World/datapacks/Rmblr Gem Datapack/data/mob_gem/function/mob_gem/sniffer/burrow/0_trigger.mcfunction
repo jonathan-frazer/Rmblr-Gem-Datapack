@@ -1,5 +1,5 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 10
+scoreboard players set @s mbGem_AbilityCooldown 4
 
 #Remove Gravity
 attribute @s generic.gravity modifier add mob_gem:sniffer_dig_gravity -1.0 add_multiplied_base

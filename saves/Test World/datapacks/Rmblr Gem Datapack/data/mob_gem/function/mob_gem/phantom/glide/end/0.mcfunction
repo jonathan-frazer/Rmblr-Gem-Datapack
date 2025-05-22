@@ -1,0 +1,1 @@
+execute as @a[tag=mbGemPhantomSched] run function mob_gem:mob_gem/phantom/glide/end/1

@@ -9,7 +9,7 @@ scoreboard objectives add mbGemjumpCount minecraft.custom:jump
 
 #Allay
 scoreboard players set mbGemStealOffset mbGem_fakePlayer 8
-data modify storage mob_gem:allay StolenItems.MobItem set value {}
+data modify storage mob_gem:auxillary Allay.StolenItems.MobItem set value {}
 
 #Armadillo
 scoreboard objectives add mbGemArmadilloShield dummy

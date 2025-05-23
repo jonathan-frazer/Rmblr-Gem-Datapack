@@ -95,6 +95,14 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:fox_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/fox/pounce/0
     execute as @a[scores={mbGem_foxPounce=1..}] at @s run function mob_gem:mob_gem/fox/pounce/4_dur
 
+#Glow Squid
+    #Ability
+    execute as @a[predicate=mob_gem:glow_squid_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/glow_squid/blind/0_trigger
+    execute as @e[type=!#mob_gem:nalive,scores={mbGemGSqdBlind=1..}] run function mob_gem:mob_gem/glow_squid/blind/2_dur
+    #Perk
+    execute as @a[predicate=mob_gem:glow_squid_gem/has_item] positioned as @s run function mob_gem:mob_gem/glow_squid/light/0
+    execute as @a[predicate=!mob_gem:glow_squid_gem/has_item,tag=mbGemGlowLight] positioned as @s run function mob_gem:mob_gem/glow_squid/light/clear
+
 #Horse
     #Ability
     execute as @a[predicate=mob_gem:horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/horse/ride/0

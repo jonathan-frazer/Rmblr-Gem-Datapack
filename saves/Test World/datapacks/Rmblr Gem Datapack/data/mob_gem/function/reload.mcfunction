@@ -36,6 +36,9 @@ scoreboard objectives add mbGem_foxPounce dummy
 #Frog
 scoreboard objectives add mbGemFrogpull dummy
 
+#Glow Squid
+scoreboard objectives add mbGemGSqdBlind dummy
+
 #Horse
 scoreboard objectives add mbGem_nonHorseRide dummy
 

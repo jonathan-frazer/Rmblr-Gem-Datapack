@@ -163,10 +163,24 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:shulker_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/shulker/0
 
+#Skeleton Horse
+    #Ability
+    execute as @a[predicate=mob_gem:skeleton_horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/skeleton_horse/pacify/0
+    execute as @e[type=skeleton,scores={mbGemSkelePacify=1..}] run function mob_gem:mob_gem/skeleton_horse/pacify/2_dur
+
 #Sniffer
     #Ability
     execute as @a[predicate=mob_gem:sniffer_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/sniffer/burrow/0_trigger
     execute as @a[scores={mbGem_snifferBurrow=1..}] at @s run function mob_gem:mob_gem/sniffer/burrow/1_dur
+
+#Snow Golem
+    #Ability
+    execute as @a[predicate=mob_gem:snow_golem_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/snow_golem/snowball/0_trigger
+    execute as @a[scores={mbGem_snowballThrow=1..}] at @s run function mob_gem:mob_gem/snow_golem/snowball/1_dur
+    execute as @e[type=snowball,name="snowGolemBall"] at @s run function mob_gem:mob_gem/snow_golem/snowball/dmg
+    #Perk
+    execute as @a[predicate=mob_gem:snow_golem_gem/holding_item] if predicate mob_gem:on_ground positioned as @s run fill ~ ~ ~ ~ ~ ~ snow replace #mob_gem:passable
+    
 
 #Strider
     #Ability
@@ -182,6 +196,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
         #Sink in Lava
         execute as @a[predicate=mob_gem:strider_gem/has_item,predicate=mob_gem:sneak,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run tp @s ~ ~-0.1 ~
         execute as @a[predicate=mob_gem:strider_gem/has_item,gamemode=!spectator] at @s if block ~ ~ ~ lava run effect give @s fire_resistance 1 0 true
+
+#Turtle
+    #Ability
+    execute as @a[predicate=mob_gem:turtle_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/turtle/breath/0_trigger
 
 #Vindicator
     #Ability

@@ -55,8 +55,14 @@ scoreboard objectives add mbGemLeap dummy
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
 
+#Skeleton Horse
+scoreboard objectives add mbGemSkelePacify dummy
+
 #Sniffer
 scoreboard objectives add mbGem_snifferBurrow dummy
+
+#Snow Golem
+scoreboard objectives add mbGem_snowballThrow dummy
 
 #Warden
 scoreboard objectives add mbGemSonicBoom dummy

@@ -69,6 +69,14 @@
     execute as @a[predicate=mob_gem:sniffer_gem/has_item,tag=!mbGemSnifferSturdy] run function mob_gem:mob_gem/sniffer/sturdy/apply
     execute as @a[predicate=!mob_gem:sniffer_gem/has_item,tag=mbGemSnifferSturdy] run function mob_gem:mob_gem/sniffer/sturdy/remove
 
+#Skeleton-Horse
+    #Perk
+    execute as @a[predicate=mob_gem:skeleton_horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/skeleton_horse/step_height/apply
+    execute as @a[predicate=!mob_gem:skeleton_horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/skeleton_horse/step_height/remove
+
+#Tadpole
+    #Perk
+    execute as @a[predicate=mob_gem:tadpole_gem/has_item] run function mob_gem:mob_gem/tadpole/slime_detect/0
 
 #Tropical Fish
     #Perk

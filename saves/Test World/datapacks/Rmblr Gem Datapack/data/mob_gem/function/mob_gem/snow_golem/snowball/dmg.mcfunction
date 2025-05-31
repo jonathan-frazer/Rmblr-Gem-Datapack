@@ -1,0 +1,2 @@
+#Damage Nearby mobs
+execute as @e[type=!#mob_gem:nalive,distance=..10,predicate=!mob_gem:snow_golem_gem/has_item] positioned ~-0.90 ~-0.90 ~-0.90 if entity @s[dx=0] positioned ~0.90 ~0.90 ~0.90 run damage @s 3.0 player_attack by @p[predicate=mob_gem:snow_golem_gem/has_item]

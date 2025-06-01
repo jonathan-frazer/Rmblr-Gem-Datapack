@@ -197,6 +197,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
         execute as @a[predicate=mob_gem:strider_gem/has_item,predicate=mob_gem:sneak,gamemode=!spectator] at @s if block ~ ~-0.5 ~ lava run tp @s ~ ~-0.1 ~
         execute as @a[predicate=mob_gem:strider_gem/has_item,gamemode=!spectator] at @s if block ~ ~ ~ lava run effect give @s fire_resistance 1 0 true
 
+#Squid
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:squid_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/squid/inkjet/0_trigger
+
 #Turtle
     #Ability
     execute as @a[predicate=mob_gem:turtle_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/turtle/breath/0_trigger

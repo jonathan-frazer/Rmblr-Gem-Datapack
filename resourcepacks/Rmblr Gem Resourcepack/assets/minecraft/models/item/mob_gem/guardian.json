@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "item/mob_gem/guardian"
+    },
+    "gui_light": "front"
+}

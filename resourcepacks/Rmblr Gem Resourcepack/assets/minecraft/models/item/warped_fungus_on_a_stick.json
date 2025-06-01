@@ -465,6 +465,18 @@
                 "custom_model_data": 523199
             },
             "model": "item/mob_gem/ender_dragon"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 523200
+            },
+            "model": "item/mob_gem/guardian"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 523201
+            },
+            "model": "item/mob_gem/elder_guardian"
         }
     ]
 }

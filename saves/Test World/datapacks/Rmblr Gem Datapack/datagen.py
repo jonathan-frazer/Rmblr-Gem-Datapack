@@ -2,10 +2,10 @@ import os
 import json
 
 minecraft_mobs = ['allay', 'armadillo', 'axolotl', 'bat', 'camel', 'cat', 'chicken', 'cod', 'cow', 'donkey', 'fox', 'frog', 'glow_squid', 'horse', 'mooshroom', 'mule', 'ocelot', 'parrot', 'pig', 'pufferfish', 'rabbit', 'salmon', 'sheep', 'skeleton_horse', 'sniffer', 'snow_golem', 'squid', 'tadpole', 'tropical_fish', 'turtle', 'villager', 'wandering_trader', 'bee', 'cave_spider', 'dolphin', 'enderman', 'goat', 'iron_golem', 'llama', 'panda', 'polar_bear', 'spider', 'trader_llama', 'wolf', 'zombified_piglin', 'bogged', 'breeze', 'creeper', 'drowned', 'evoker', 'phantom', 'pillager', 'ravager', 'shulker', 'silverfish', 'skeleton', 'slime', 'stray', 'vex', 'vindicator', 'warden', 'witch', 'zombie', 'husk', 'zombie_villager', 'strider', 'hoglin', 'piglin', 'blaze', 'ghast', 
-'magma_cube', 'piglin_brute', 'wither_skeleton', 'zoglin', 'wither', 'endermite', 'ender_dragon']
+'magma_cube', 'piglin_brute', 'wither_skeleton', 'zoglin','wither', 'endermite', 'ender_dragon','guardian','elder_guardian']
 
 #Advancement
-advancement_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\advancement\kill_mob"
+advancement_path = r"C:\Users\My PC\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\advancement\kill_mob"
 for mob in minecraft_mobs:
 	if os.path.exists(os.path.join(advancement_path, f"{mob}.json")): continue
 	with open(os.path.join(advancement_path, f"{mob}.json"), 'w') as f:
@@ -30,7 +30,7 @@ for mob in minecraft_mobs:
 print("Generated Advancements")
 
 #Warped Fungus to Write the Custom Model Data
-warped_fungus_file = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item"
+warped_fungus_file = r"C:\Users\My PC\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item"
 custom_model_data = 523123
 warped_fungus_data = {
 	"parent": "minecraft:item/handheld_rod",
@@ -47,7 +47,7 @@ with open(os.path.join(warped_fungus_file, f"warped_fungus_on_a_stick.json"), 'w
 print("Wrote to the Warped Fungus File")	
 
 #Model Files
-resource_pack_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item\mob_gem"
+resource_pack_path = r"C:\Users\My PC\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\models\item\mob_gem"
 for mob in minecraft_mobs:
 	with open(os.path.join(resource_pack_path, f"{mob}.json"), 'w') as f:
 		json.dump({"parent": "minecraft:item/generated",
@@ -59,7 +59,7 @@ for mob in minecraft_mobs:
 print("Added Model Files for the gems")
 
 #Function Files
-function_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\function\acquire_gem"
+function_path = r"C:\Users\My PC\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\function\acquire_gem"
 for i,mob in enumerate(minecraft_mobs):
 	if os.path.exists(os.path.join(function_path, f"{mob}.mcfunction")):		continue
 	with open(os.path.join(function_path, f"{mob}.mcfunction"), 'w') as f:
@@ -72,9 +72,10 @@ for i,mob in enumerate(minecraft_mobs):
 print("Created Functions for Getting the Gems")
 
 #Predicate Files
-predicate_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\predicate"
+predicate_path = r"C:\Users\My PC\AppData\Roaming\.minecraft\saves\Test World\datapacks\Rmblr Gem Datapack\data\mob_gem\predicate"
 for i,mob in enumerate(minecraft_mobs):
 	if os.path.exists(os.path.join(predicate_path, f"{mob}_gem")):	continue
+	else:	os.mkdir(os.path.join(predicate_path, f"{mob}_gem"))
 		
 	with open(os.path.join(predicate_path, f"{mob}_gem\\holding_item.json"), 'w') as f:
 		json.dump(
@@ -150,7 +151,7 @@ for i,mob in enumerate(minecraft_mobs):
 print("Created Predicates")
 
 #Rename Textures
-texture_path = r"C:\Users\jonat\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\textures\item\mob_gem"
+texture_path = r"C:\Users\My PC\AppData\Roaming\.minecraft\resourcepacks\Rmblr Gem Resourcepack\assets\minecraft\textures\item\mob_gem"
 
 for texture in os.listdir(texture_path):
 	if "_spawn_egg" in texture:

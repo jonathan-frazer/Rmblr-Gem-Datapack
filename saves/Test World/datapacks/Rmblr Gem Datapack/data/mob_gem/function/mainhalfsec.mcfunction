@@ -107,6 +107,7 @@
     #Perk
     execute as @e[type=llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
     execute as @e[type=trader_llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
+
 #Warden
     #Ability
     execute as @a[scores={mbGemWardHeart=1..}] run function mob_gem:mob_gem/warden/sonic_boom/6_black_heart

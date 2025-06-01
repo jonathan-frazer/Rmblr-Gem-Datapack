@@ -39,10 +39,6 @@ scoreboard players remove @a[scores={mbGem_AbilityCooldown=1..}] mbGem_AbilityCo
 #Wandering Trader
     #Ability
     execute as @a[predicate=mob_gem:wandering_trader_gem/invisible] run function mob_gem:mob_gem/wandering_trader/invisibility/3_long_dur
-    #Perk
-    execute as @e[type=llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
-    execute as @e[type=trader_llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
-
 
 #Warden
     #Perk

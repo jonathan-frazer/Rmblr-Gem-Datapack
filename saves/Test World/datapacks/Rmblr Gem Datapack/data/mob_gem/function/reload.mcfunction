@@ -67,6 +67,9 @@ scoreboard objectives add mbGemLeap dummy
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
 
+#Skeleton-Type
+scoreboard objectives add mbGemShootBow used:bow
+
 #Skeleton Horse
 scoreboard objectives add mbGemSkelePacify dummy
 

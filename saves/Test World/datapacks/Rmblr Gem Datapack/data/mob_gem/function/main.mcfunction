@@ -20,6 +20,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[tag=mbGemBeeSpawning] at @s run function mob_gem:mob_gem/bee/swarm/2_bee_spawning
     execute as @e[type=bee,name=GemBeeSpawn] run function mob_gem:mob_gem/bee/swarm/4_bee_dur
 
+#Bogged
+    #Perk
+    execute as @a[predicate=mob_gem:bogged_gem/has_item,scores={mbGemShootBow=1..3}] at @s run function mob_gem:mob_gem/bogged/poison_arrow/0
+    execute as @a[predicate=mob_gem:bogged_gem/has_item,scores={mbGemCrossbow=1..3}] at @s run function mob_gem:mob_gem/bogged/poison_arrow/0
+
 #Breeze
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:breeze_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. if predicate mob_gem:on_ground at @s run function mob_gem:mob_gem/breeze/launch/0
@@ -108,6 +113,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/horse/ride/0
     execute as @a[scores={mbGem_nonHorseRide=1..}] positioned as @s run function mob_gem:mob_gem/horse/ride/3_dur
 
+#Husk
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:husk_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/husk/break/0
+
 #Llama
     #Ability
     execute as @a[predicate=mob_gem:llama_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/llama/spit/0_trigger
@@ -119,7 +128,6 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Perk
     execute as @a[predicate=mob_gem:mooshroom_gem/has_item,predicate=mob_gem:mooshroom_gem/holding_sus_stew,predicate=!mob_gem:mooshroom_gem/holding_super_stew] run function mob_gem:mob_gem/mooshroom/reveal/0
     
-
 #Parrot
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:parrot_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/parrot/0
@@ -185,7 +193,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @e[type=snowball,name="snowGolemBall"] at @s run function mob_gem:mob_gem/snow_golem/snowball/dmg
     #Perk
     execute as @a[predicate=mob_gem:snow_golem_gem/holding_item] if predicate mob_gem:on_ground positioned as @s run fill ~ ~ ~ ~ ~ ~ snow replace #mob_gem:passable
-    
+
+#Stray
+    #Perk
+    execute as @a[predicate=mob_gem:stray_gem/has_item,scores={mbGemShootBow=1..3}] at @s run function mob_gem:mob_gem/stray/slow_arrow/0
+    execute as @a[predicate=mob_gem:stray_gem/has_item,scores={mbGemCrossbow=1..3}] at @s run function mob_gem:mob_gem/stray/slow_arrow/0
 
 #Strider
     #Ability
@@ -235,9 +247,12 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:warden_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/warden/sonic_boom/0_activate
     execute as @a[scores={mbGemSonicBoom=1..}] at @s run function mob_gem:mob_gem/warden/sonic_boom/1_dur
 
-
+#Zombie
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:zombie_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/zombie/break/0
 
 scoreboard players reset @a mbGem_Click
 scoreboard players reset @a mbGemTrident
 scoreboard players reset @a mbGemCrossbow
 scoreboard players reset @a mbGemjumpCount
+scoreboard players reset @a mbGemShootBow

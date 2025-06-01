@@ -48,6 +48,12 @@
     execute as @a[predicate=mob_gem:horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/apply
     execute as @a[predicate=!mob_gem:horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/remove
 
+#Husk
+    #Perk
+    execute as @a[predicate=mob_gem:husk_gem/has_item,tag=!mbGemHuskBuff] if predicate mob_gem:husk_gem/day_time run function mob_gem:mob_gem/husk/buff/apply
+    execute as @a[predicate=!mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] run function mob_gem:mob_gem/husk/buff/remove
+    execute as @a[predicate=mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] unless predicate mob_gem:husk_gem/day_time run function mob_gem:mob_gem/husk/buff/remove
+
 #Piglin Brute
     #Perk
     execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=!mbGemGoldBoost] if predicate mob_gem:piglin_brute_gem/holding_gold_tool run function mob_gem:mob_gem/piglin_brute/gold_boost/apply
@@ -111,6 +117,12 @@
 #Warden
     #Ability
     execute as @a[scores={mbGemWardHeart=1..}] run function mob_gem:mob_gem/warden/sonic_boom/6_black_heart
+
+#Zombie
+    #Perk
+    execute as @a[predicate=mob_gem:zombie_gem/has_item,tag=!mbGemZombieBuff] if predicate mob_gem:zombie_gem/night_time run function mob_gem:mob_gem/zombie/buff/apply
+    execute as @a[predicate=!mob_gem:zombie_gem/has_item,tag=mbGemZombieBuff] run function mob_gem:mob_gem/zombie/buff/remove
+    execute as @a[predicate=mob_gem:zombie_gem/has_item,tag=mbGemZombieBuff] unless predicate mob_gem:zombie_gem/night_time run function mob_gem:mob_gem/zombie/buff/remove
 
 #Cycle every Half Second
 schedule function mob_gem:mainhalfsec 10t

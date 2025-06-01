@@ -1,0 +1,1 @@
+execute as @e[type=!#mob_gem:nalive,distance=..10,predicate=!mob_gem:llama_gem/has_item] positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] positioned ~0.85 ~0.85 ~0.85 run damage @s 6.0 spit by @p[predicate=mob_gem:llama_gem/has_item]

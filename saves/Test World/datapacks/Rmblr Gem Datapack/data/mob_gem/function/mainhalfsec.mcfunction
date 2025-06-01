@@ -93,12 +93,20 @@
     #Ability
     tag @a[tag=mbGemVexCharge,predicate=!mob_gem:vex_gem/raging] remove mbGemVexCharge 
 
+#Villager
+    #Perk
+    execute as @a[predicate=mob_gem:villager_gem/has_item] run function mob_gem:mob_gem/villager/village_hero/0
+
 #Vindicator
     #Perk
     execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=!mbGemAxeBoost] if entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_axe] run function mob_gem:mob_gem/vindicator/axe_boost/apply
     execute as @a[predicate=!mob_gem:vindicator_gem/has_item,tag=mbGemAxeBoost] run function mob_gem:mob_gem/vindicator/axe_boost/remove
     execute as @a[predicate=mob_gem:vindicator_gem/has_item,tag=mbGemAxeBoost] unless entity @n[type=!#mob_gem:nalive,predicate=mob_gem:vindicator_gem/holding_axe] run function mob_gem:mob_gem/vindicator/axe_boost/remove
 
+#Wandering Trader
+    #Perk
+    execute as @e[type=llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
+    execute as @e[type=trader_llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
 #Warden
     #Ability
     execute as @a[scores={mbGemWardHeart=1..}] run function mob_gem:mob_gem/warden/sonic_boom/6_black_heart

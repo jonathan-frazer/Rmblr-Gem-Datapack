@@ -1,0 +1,2 @@
+execute rotated as @s run summon area_effect_cloud ^ ^ ^1.75 {CustomName:'{"text":"spitThrowPtr"}',Duration:1}
+data modify storage mob_gem:auxillary llama.spitPos set from entity @n[type=area_effect_cloud,distance=..2,name="spitThrowPtr"] Pos

@@ -20,6 +20,15 @@ scoreboard objectives add mbGem_camelGrow dummy
 #Cat
 scoreboard objectives add mbGemScareTimer dummy
 
+#Cave Spider
+scoreboard objectives add ThrowX dummy
+scoreboard objectives add ThrowY dummy
+scoreboard objectives add ThrowZ dummy
+scoreboard objectives add OriginX dummy
+scoreboard objectives add OriginY dummy
+scoreboard objectives add OriginZ dummy
+scoreboard players set One ThrowY 1
+
 #Chicken
 scoreboard objectives add mbGemChickenFlaps dummy
 
@@ -45,6 +54,9 @@ scoreboard objectives add mbGem_nonHorseRide dummy
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy
 
+#Piglin Brute
+scoreboard objectives add mbGemAxePhase dummy
+
 #Pillager
 scoreboard objectives add mbGemCrossbow used:crossbow
 
@@ -68,17 +80,9 @@ scoreboard objectives add mbGem_snowballThrow dummy
 scoreboard objectives add mbGemSonicBoom dummy
 scoreboard objectives add mbGemWardHeart dummy
 
-#Piglin Brute
-scoreboard objectives add mbGemAxePhase dummy
+#Wandering Trader
+scoreboard objectives add mbGemWanderInvis dummy
 
-#Cave Spider
-scoreboard objectives add ThrowX dummy
-scoreboard objectives add ThrowY dummy
-scoreboard objectives add ThrowZ dummy
-scoreboard objectives add OriginX dummy
-scoreboard objectives add OriginY dummy
-scoreboard objectives add OriginZ dummy
-scoreboard players set One ThrowY 1
 
 
 team add Intangible

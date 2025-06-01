@@ -32,6 +32,18 @@ scoreboard players remove @a[scores={mbGem_AbilityCooldown=1..}] mbGem_AbilityCo
 
 #Turtle
 
+#Villager
+    #Infinite Stock
+    execute as @e[type=villager] run function mob_gem:mob_gem/villager/infinite_stock/0
+
+#Wandering Trader
+    #Ability
+    execute as @a[predicate=mob_gem:wandering_trader_gem/invisible] run function mob_gem:mob_gem/wandering_trader/invisibility/3_long_dur
+    #Perk
+    execute as @e[type=llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
+    execute as @e[type=trader_llama] at @s run function mob_gem:mob_gem/wandering_trader/llama_passive/0_sec
+
+
 #Warden
     #Perk
     execute as @a[predicate=mob_gem:warden_gem/has_item] run function mob_gem:mob_gem/warden/immunity/remove_effects

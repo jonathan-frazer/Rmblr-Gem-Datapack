@@ -108,6 +108,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/horse/ride/0
     execute as @a[scores={mbGem_nonHorseRide=1..}] positioned as @s run function mob_gem:mob_gem/horse/ride/3_dur
 
+#Llama
+    #Ability
+    execute as @a[predicate=mob_gem:llama_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/llama/spit/0_trigger
+    execute as @e[type=llama_spit,name=mbGemSpit] at @s run function mob_gem:mob_gem/llama/spit/damage
+
 #MooshRoom
     #Ability
     execute as @a[predicate=mob_gem:mooshroom_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/mooshroom/super_stew/0_trigger
@@ -205,6 +210,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:turtle_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/turtle/breath/0_trigger
 
+#Villager
+    #Ability
+    execute as @a[predicate=mob_gem:villager_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/villager/spawn_golem/0_trigger
+    execute as @e[type=iron_golem,tag=playerGolemSpawn] run function mob_gem:mob_gem/villager/spawn_golem/2_dur
+
 #Vindicator
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:vindicator_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/vindicator/tomohawk_throw/0_trigger
@@ -214,10 +224,17 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:vex_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/vex/rage/0_trigger
 
+
+#Wandering Trader
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wandering_trader_gem/holding_item] unless score @s mbGemWanderInvis matches 1.. at @s run function mob_gem:mob_gem/wandering_trader/invisibility/0_trigger
+    execute as @a[scores={mbGemWanderInvis=1..}] run function mob_gem:mob_gem/wandering_trader/invisibility/1_dur
+
 #Warden
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:warden_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/warden/sonic_boom/0_activate
     execute as @a[scores={mbGemSonicBoom=1..}] at @s run function mob_gem:mob_gem/warden/sonic_boom/1_dur
+
 
 
 scoreboard players reset @a mbGem_Click

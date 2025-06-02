@@ -13,6 +13,8 @@ data modify entity @s[type=!player] Silent set value 0b
 data modify entity @s[type=!player] Invulnerable set value 0b
 team leave @s[team=Intangible,type=!player]
 
+damage @s 3.0 player_attack by @p[predicate=mob_gem:frog_gem/has_item]
+
 scoreboard players reset @s mbGemFrogpull
 
 tp @s ~ ~0.4 ~ ~ ~

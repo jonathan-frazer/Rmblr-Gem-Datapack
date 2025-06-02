@@ -133,6 +133,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:husk_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/husk/break/0
 
+#Iron Golem
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:iron_golem_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/iron_golem/uppercut/0_trigger
+    execute as @e[type=!#mob_gem:nalive,predicate=mob_gem:iron_golem_gem/uppercut_effect] run function mob_gem:mob_gem/iron_golem/uppercut/2_drop
+
 #Llama
     #Ability
     execute as @a[predicate=mob_gem:llama_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/llama/spit/0_trigger

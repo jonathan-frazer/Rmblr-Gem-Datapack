@@ -277,6 +277,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:warden_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/warden/sonic_boom/0_activate
     execute as @a[scores={mbGemSonicBoom=1..}] at @s run function mob_gem:mob_gem/warden/sonic_boom/1_dur
 
+#Wither
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wither_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/wither/skull/0_trigger
+    execute as @e[type=wither_skull,tag=mbGemSkull] run function mob_gem:mob_gem/wither/skull/3_dur
+
 #Zombie
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:zombie_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/zombie/break/0

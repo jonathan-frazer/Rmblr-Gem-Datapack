@@ -1,2 +1,2 @@
 #Inflict Extended Wither
-effect give @s wither 15 0 true
+effect give @s wither 7 0 true

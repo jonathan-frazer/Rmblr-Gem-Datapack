@@ -191,6 +191,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:ravager_gem/has_item,predicate=mob_gem:sprint] run function mob_gem:mob_gem/ravager/sprint/0
     execute as @a[predicate=mob_gem:ravager_gem/has_item,predicate=!mob_gem:sprint] if score @s mbGemRavageSprintDur matches 1.. run function mob_gem:mob_gem/ravager/sprint/3_stop_sprint
 
+#Silverfish
+    #Ability
+    execute as @a[predicate=mob_gem:silverfish_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/silverfish/shrink/0_trigger
+    execute as @a[scores={mbGemShrinkSilver=1..}] at @s run function mob_gem:mob_gem/silverfish/shrink/1_dur
+
 #Spider
     #Ability
     execute as @a[predicate=mob_gem:spider_gem/holding_item] at @s run function mob_gem:mob_gem/spider/wall_climb/0

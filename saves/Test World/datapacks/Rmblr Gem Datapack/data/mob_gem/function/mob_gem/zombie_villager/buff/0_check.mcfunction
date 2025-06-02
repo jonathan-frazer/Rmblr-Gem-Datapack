@@ -1,0 +1,1 @@
+execute if predicate mob_gem:zombie_villager_gem/has_weakness run function mob_gem:mob_gem/zombie_villager/buff/1_apply

@@ -83,6 +83,9 @@ scoreboard objectives add mbGemRavageSprintDur dummy
 scoreboard objectives add mbGemSleepTick dummy
 scoreboard objectives add mbGemSleepSec dummy
 
+#Silverfish
+scoreboard objectives add mbGemShrinkSilver dummy
+
 #Skeleton-Type
 scoreboard objectives add mbGemShootBow used:bow
 

@@ -1,0 +1,1 @@
+execute as @a[tag=mbGuardKBRes] run function mob_gem:mob_gem/guardian/player_thorns/3_clear

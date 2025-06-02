@@ -39,6 +39,11 @@
     execute as @a[predicate=mob_gem:drowned_gem/has_item,tag=!mbGemDrownedWater] run function mob_gem:mob_gem/drowned/water_speed/apply
     execute as @a[predicate=!mob_gem:drowned_gem/has_item,tag=mbGemDrownedWater] run function mob_gem:mob_gem/drowned/water_speed/remove
 
+#Elder Guardian
+    #Perk
+    execute as @a[predicate=mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] positioned as @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/effect
+    execute as @a[predicate=!mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] positioned as @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/remove
+
 #Evoker
     #Perk
     execute as @a[predicate=mob_gem:evoker_gem/has_item] positioned as @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] positioned as @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate

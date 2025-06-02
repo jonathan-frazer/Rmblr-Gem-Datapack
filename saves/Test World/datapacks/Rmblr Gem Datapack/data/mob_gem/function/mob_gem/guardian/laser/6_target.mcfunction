@@ -1,0 +1,1 @@
+scoreboard players add @n[type=!#mob_gem:nalive,tag=mbGuardianLaserTget,distance=..24] mbGemGuardianLaser 1

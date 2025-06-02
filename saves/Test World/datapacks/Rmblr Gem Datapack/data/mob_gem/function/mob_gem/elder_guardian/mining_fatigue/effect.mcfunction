@@ -1,0 +1,1 @@
+effect give @e[type=!#mob_gem:nalive,distance=0.1..32] mining_fatigue 1 2 false

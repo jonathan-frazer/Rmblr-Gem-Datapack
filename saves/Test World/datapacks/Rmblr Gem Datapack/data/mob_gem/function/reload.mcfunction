@@ -1,5 +1,6 @@
 say Mob Gem Datapack Loaded!
-
+##CHANGE THIS WHEN FINISHED
+data remove storage mob_gem:gem_acquire GemsCurrentlySpawned
 scoreboard objectives add mbGem_fakePlayer dummy
 scoreboard objectives add mbGem_Click used:warped_fungus_on_a_stick
 scoreboard objectives add mbGem_AbilityCooldown dummy
@@ -39,6 +40,10 @@ scoreboard objectives add mbGemExplosionTime dummy
 scoreboard objectives add mbGemRiptide dummy
 scoreboard objectives add mbGemTrident used:trident
 
+#Elder Guardian
+scoreboard objectives add mbGemEGuardianLaser dummy
+scoreboard objectives add mbGemEGuardianTimer dummy
+
 #Fox
 scoreboard objectives add mbGem_foxPounce dummy
 
@@ -50,6 +55,7 @@ scoreboard objectives add mbGemGSqdBlind dummy
 
 #Guardian
 scoreboard objectives add mbGemGuardianLaser dummy
+scoreboard objectives add mbGemGuardianTimer dummy
 
 #Horse
 scoreboard objectives add mbGem_nonHorseRide dummy
@@ -65,6 +71,13 @@ scoreboard objectives add mbGemCrossbow used:crossbow
 
 #Rabbit
 scoreboard objectives add mbGemLeap dummy
+
+#Ravager
+scoreboard objectives add mbGemRavagerRoar dummy
+scoreboard objectives add mbGemRavagerRoared dummy
+scoreboard objectives add mbGemRavageSprintCyc dummy
+scoreboard players set ten mbGem_fakePlayer 10
+scoreboard objectives add mbGemRavageSprintDur dummy
 
 #Sheep
 scoreboard objectives add mbGemSleepTick dummy

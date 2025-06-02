@@ -73,6 +73,15 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGemRiptide=1..}] run function mob_gem:mob_gem/drowned/riptide/2_back
     execute as @a[scores={mbGemTrident=1..}] run function mob_gem:mob_gem/drowned/riptide/6_launch
 
+#Elder Guardian
+    #Ability
+    execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item,scores={mbGem_Click=1..3},predicate=!mob_gem:sneak] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/elder_guardian/laser/0_trigger
+    execute as @e[type=!#mob_gem:nalive,scores={mbGemEGuardianTimer=1..}] run function mob_gem:mob_gem/elder_guardian/laser/4_dur
+    execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item] if predicate mob_gem:elder_guardian_gem/laser_target at @s run function mob_gem:mob_gem/elder_guardian/laser/6_target
+    #Perk
+    execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:sneak,tag=!mbEGuardianFatigue] run function mob_gem:mob_gem/elder_guardian/mining_fatigue/apply
+    execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:sneak,tag=mbEGuardianFatigue] run function mob_gem:mob_gem/elder_guardian/mining_fatigue/remove
+
 #Enderman
     #Perk
     execute as @a[predicate=mob_gem:enderman_gem/has_item] at @s run function mob_gem:mob_gem/enderman/aggro/0_scan
@@ -107,6 +116,13 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Perk
     execute as @a[predicate=mob_gem:glow_squid_gem/has_item] positioned as @s run function mob_gem:mob_gem/glow_squid/light/0
     execute as @a[predicate=!mob_gem:glow_squid_gem/has_item,tag=mbGemGlowLight] positioned as @s run function mob_gem:mob_gem/glow_squid/light/clear
+
+#Guardian
+    #Ability
+    execute as @a[predicate=mob_gem:guardian_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/guardian/laser/0_trigger
+    execute as @e[type=!#mob_gem:nalive,scores={mbGemGuardianTimer=1..}] run function mob_gem:mob_gem/guardian/laser/4_dur
+    execute as @a[predicate=mob_gem:guardian_gem/holding_item] if predicate mob_gem:guardian_gem/laser_target at @s run function mob_gem:mob_gem/guardian/laser/6_target
+    
 
 #Horse
     #Ability
@@ -160,6 +176,15 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:rabbit_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:on_ground] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/rabbit/leap/0_trigger
     execute as @a[scores={mbGemLeap=1..}] run function mob_gem:mob_gem/rabbit/leap/1_dur with storage mob_gem:auxillary rabbit
+
+#Ravager
+    #Ability
+    execute as @a[predicate=mob_gem:ravager_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/ravager/roar/0_trigger
+    execute as @a[scores={mbGemRavagerRoar=1..}] run function mob_gem:mob_gem/ravager/roar/1_dur
+    execute as @e[type=!#mob_gem:nalive,scores={mbGemRavagerRoared=1..}] positioned as @s run function mob_gem:mob_gem/ravager/roar/3_dur
+    #Perk
+    execute as @a[predicate=mob_gem:ravager_gem/has_item,predicate=mob_gem:sprint] run function mob_gem:mob_gem/ravager/sprint/0
+    execute as @a[predicate=mob_gem:ravager_gem/has_item,predicate=!mob_gem:sprint] if score @s mbGemRavageSprintDur matches 1.. run function mob_gem:mob_gem/ravager/sprint/3_stop_sprint
 
 #Spider
     #Ability

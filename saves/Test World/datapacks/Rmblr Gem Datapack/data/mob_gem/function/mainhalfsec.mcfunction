@@ -75,6 +75,12 @@
     execute as @a[predicate=mob_gem:salmon_gem/has_item] at @s anchored eyes run function mob_gem:mob_gem/salmon/haste
     execute as @a[predicate=!mob_gem:salmon_gem/has_item,predicate=mob_gem:salmon_gem/haste_effect] run effect clear @s haste
 
+#Slime
+    #Perk
+    execute as @a[predicate=mob_gem:slime_gem/has_item,tag=!mbGemSlimeFall] run function mob_gem:mob_gem/slime/bounce_back/apply
+    execute as @a[predicate=!mob_gem:slime_gem/has_item,tag=mbGemSlimeFall] run function mob_gem:mob_gem/slime/bounce_back/remove
+
+
 #Sniffer
     #Perk
     execute as @a[predicate=mob_gem:sniffer_gem/has_item,tag=!mbGemSnifferSturdy] run function mob_gem:mob_gem/sniffer/sturdy/apply

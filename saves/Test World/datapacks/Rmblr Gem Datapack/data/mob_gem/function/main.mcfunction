@@ -117,6 +117,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:glow_squid_gem/has_item] positioned as @s run function mob_gem:mob_gem/glow_squid/light/0
     execute as @a[predicate=!mob_gem:glow_squid_gem/has_item,tag=mbGemGlowLight] positioned as @s run function mob_gem:mob_gem/glow_squid/light/clear
 
+#Goat
+    #Ability
+    execute as @a[predicate=mob_gem:goat_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/goat/ram/0_trigger
+    execute as @a[scores={mbGemGoatRam=1..}] at @s run function mob_gem:mob_gem/goat/ram/4_dur
+
 #Guardian
     #Ability
     execute as @a[predicate=mob_gem:guardian_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/guardian/laser/0_trigger
@@ -215,6 +220,12 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[predicate=mob_gem:skeleton_horse_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/skeleton_horse/pacify/0
     execute as @e[type=skeleton,scores={mbGemSkelePacify=1..}] run function mob_gem:mob_gem/skeleton_horse/pacify/2_dur
+
+#Slime
+    #Perk
+    execute as @a[predicate=mob_gem:slime_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-1 ~ #mob_gem:passable run function mob_gem:mob_gem/slime/bounce_back/0
+    execute as @a[predicate=mob_gem:slime_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-2 ~ #mob_gem:passable run function mob_gem:mob_gem/slime/bounce_back/0
+    effect clear @a[predicate=mob_gem:slime_gem/has_item,predicate=mob_gem:slime_gem/bounce_levitation] levitation
 
 #Sniffer
     #Ability

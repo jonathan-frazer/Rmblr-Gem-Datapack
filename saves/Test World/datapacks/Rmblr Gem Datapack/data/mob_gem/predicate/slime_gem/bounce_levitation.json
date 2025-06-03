@@ -1,0 +1,20 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "effects": {
+        "minecraft:levitation": {
+          "amplifier": {
+            "min": 4,
+            "max": 255
+          },
+          "duration": {
+            "min":0,
+            "max":12
+          },
+          "visible": false
+        }
+      }
+    }
+  }

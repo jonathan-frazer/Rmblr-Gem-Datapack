@@ -1,0 +1,4 @@
+execute positioned as @s rotated ~ 0 positioned ^ ^ ^-0.75 if block ~ ~0.15 ~ #mob_gem:passable if block ~ ~1.15 ~ #mob_gem:passable run tp @s ^ ^ ^0.05
+execute positioned as @s rotated ~ 0 positioned ^ ^ ^-0.75 if block ~ ~0.15 ~ #mob_gem:passable if block ~ ~1.15 ~ #mob_gem:passable run tp @s ^ ^ ^0.05
+execute positioned as @s rotated ~ 0 positioned ^ ^ ^-0.75 if block ~ ~0.15 ~ #mob_gem:passable if block ~ ~1.15 ~ #mob_gem:passable run tp @s ^ ^ ^0.05
+execute positioned as @s rotated ~ 0 positioned ^ ^ ^-0.75 if block ~ ~0.15 ~ #mob_gem:passable if block ~ ~1.15 ~ #mob_gem:passable run tp @s ^ ^ ^0.05

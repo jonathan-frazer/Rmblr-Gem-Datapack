@@ -1,0 +1,1 @@
+$execute as @e[type=!#mob_gem:nalive,distance=..5,predicate=!mob_gem:slime_gem/has_item] run damage @s $(stompDmg)

@@ -5,13 +5,10 @@
       "type": "minecraft:player",
       "effects": {
         "minecraft:levitation": {
-          "amplifier": {
-            "min": 4,
-            "max": 255
-          },
+          "amplifier": 23,
           "duration": {
             "min":0,
-            "max":14
+            "max":12
           },
           "visible": false
         }

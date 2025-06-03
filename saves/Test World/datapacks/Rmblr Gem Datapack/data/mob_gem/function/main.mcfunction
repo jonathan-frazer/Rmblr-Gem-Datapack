@@ -222,6 +222,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @e[type=skeleton,scores={mbGemSkelePacify=1..}] run function mob_gem:mob_gem/skeleton_horse/pacify/2_dur
 
 #Slime
+    #Ability
+    execute as @a[predicate=mob_gem:slime_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:on_ground] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/slime/stomp/0_trigger
+    effect clear @a[predicate=mob_gem:slime_gem/has_item,predicate=mob_gem:slime_gem/stomp_levitation,tag=mbGemSlimeStomp] levitation
+    execute as @a[tag=mbGemSlimeStomp] run function mob_gem:mob_gem/slime/stomp/1_dur
+
     #Perk
     execute as @a[predicate=mob_gem:slime_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-1 ~ #mob_gem:passable run function mob_gem:mob_gem/slime/bounce_back/0
     execute as @a[predicate=mob_gem:slime_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-2 ~ #mob_gem:passable run function mob_gem:mob_gem/slime/bounce_back/0

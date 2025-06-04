@@ -1,0 +1,5 @@
+{
+  "function": "minecraft:set_potion",
+  "id": "minecraft:long_swiftness",
+  "conditions": []
+}

@@ -65,6 +65,13 @@
     execute as @a[predicate=!mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
     execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=mbGemGoldBoost] unless predicate mob_gem:piglin_brute_gem/holding_gold_tool run function mob_gem:mob_gem/piglin_brute/gold_boost/remove
 
+#Polar Bear
+    #Perk
+    execute as @a[predicate=mob_gem:polar_bear_gem/has_item,predicate=mob_gem:polar_bear_gem/snow_biome,tag=!mbGemPolarStrength] at @s anchored eyes run function mob_gem:mob_gem/polar_bear/snow_strength/apply
+    execute as @a[predicate=!mob_gem:polar_bear_gem/snow_biome,tag=mbGemPolarStrength] run function mob_gem:mob_gem/polar_bear/snow_strength/remove
+    execute as @a[predicate=!mob_gem:polar_bear_gem/has_item,tag=mbGemPolarStrength] run function mob_gem:mob_gem/polar_bear/snow_strength/remove
+    execute at @a[tag=mbGemPolarStrength] run function mob_gem:mob_gem/polar_bear/snow_strength/fx
+
 #Rabbit
     #Perk
     execute as @a[predicate=mob_gem:rabbit_gem/has_item,tag=!mbGemRabbitJB] run function mob_gem:mob_gem/rabbit/jump_boost/apply
@@ -79,7 +86,6 @@
     #Perk
     execute as @a[predicate=mob_gem:slime_gem/has_item,tag=!mbGemSlimeFall] run function mob_gem:mob_gem/slime/bounce_back/apply
     execute as @a[predicate=!mob_gem:slime_gem/has_item,tag=mbGemSlimeFall] run function mob_gem:mob_gem/slime/bounce_back/remove
-
 
 #Sniffer
     #Perk

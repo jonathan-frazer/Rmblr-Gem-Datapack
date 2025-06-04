@@ -175,8 +175,12 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @e[type=armor_stand,name="mbGemTomohawkI"] run function mob_gem:mob_gem/piglin_brute/tomohawk_throw/3_dur
 
 #Pillager
-    #Ability
+    #Perk
     execute as @a[predicate=mob_gem:pillager_gem/has_item,scores={mbGemCrossbow=1..3},predicate=!mob_gem:sneak] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pillager/aimbot/0
+
+#Polar Bear
+    #Ability
+    execute as @a[predicate=mob_gem:polar_bear_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/polar_bear/frost_enchant/0_trigger
 
 #Pufferfish
     #Ability
@@ -297,6 +301,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:warden_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/warden/sonic_boom/0_activate
     execute as @a[scores={mbGemSonicBoom=1..}] at @s run function mob_gem:mob_gem/warden/sonic_boom/1_dur
+
+#Witch
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:witch_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/witch/throw_potion/0_trigger
 
 #Wither
     #Ability

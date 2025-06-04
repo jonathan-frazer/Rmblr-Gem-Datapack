@@ -47,6 +47,11 @@ execute as @a run function mob_gem:mob_gem/cooldown_bar
     #Ability
     execute as @a[predicate=mob_gem:wandering_trader_gem/invisible] run function mob_gem:mob_gem/wandering_trader/invisibility/3_long_dur
 
+#Witch
+    #Perk
+    execute as @a[predicate=mob_gem:witch_gem/has_item] run function mob_gem:mob_gem/witch/extend_potion/0
+
+
 #Warden
     #Perk
     execute as @a[predicate=mob_gem:warden_gem/has_item] run function mob_gem:mob_gem/warden/immunity/remove_effects

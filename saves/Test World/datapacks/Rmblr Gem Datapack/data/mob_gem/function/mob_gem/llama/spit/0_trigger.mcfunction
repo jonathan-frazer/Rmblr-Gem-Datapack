@@ -1,5 +1,5 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 2
+scoreboard players set @s mbGem_AbilityCooldown 4
 
 #Store Pos
 execute positioned 0.00 0.00 0.00 run function mob_gem:mob_gem/llama/spit/1_store_pos

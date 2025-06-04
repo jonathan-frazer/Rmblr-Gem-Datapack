@@ -1,4 +1,4 @@
-#Cooldown of 10 seconds
+#Cooldown of 60 seconds
 scoreboard players set @s mbGem_AbilityCooldown 60
 
 #Super Stew

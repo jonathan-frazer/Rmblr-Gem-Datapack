@@ -1,5 +1,5 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 10
+scoreboard players set @s mbGem_AbilityCooldown 20
 
 #Remove Tag
 tag @s remove mbGemPhantomGlide

@@ -1,5 +1,5 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 10
+scoreboard players set @s mbGem_AbilityCooldown 6
 
 #Fangs
 execute rotated ~ 0 if block ^ ^ ^2 #mob_gem:passable run summon evoker_fangs ^ ^-0.5 ^2 {Warmup:1}

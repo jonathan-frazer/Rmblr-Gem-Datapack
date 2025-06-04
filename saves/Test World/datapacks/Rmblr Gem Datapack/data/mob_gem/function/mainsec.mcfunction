@@ -51,10 +51,13 @@ execute as @a run function mob_gem:mob_gem/cooldown_bar
     #Perk
     execute as @a[predicate=mob_gem:witch_gem/has_item] run function mob_gem:mob_gem/witch/extend_potion/0
 
-
 #Warden
     #Perk
     execute as @a[predicate=mob_gem:warden_gem/has_item] run function mob_gem:mob_gem/warden/immunity/remove_effects
+
+#Wolf
+    #Ability
+    execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/companionship/4_scan
 
 #Entity Clean up
 scoreboard players add @e[tag=mbGemCleanUp] mbGem_CleanUp 1

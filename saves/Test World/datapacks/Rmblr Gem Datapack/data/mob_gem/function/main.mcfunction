@@ -311,6 +311,13 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wither_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/wither/skull/0_trigger
     execute as @e[type=wither_skull,tag=mbGemSkull] run function mob_gem:mob_gem/wither/skull/3_dur
 
+#Wolf
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wolf_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s unless predicate mob_gem:sneak run function mob_gem:mob_gem/wolf/companionship/0_trigger
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wolf_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s if predicate mob_gem:sneak run function mob_gem:mob_gem/wolf/companionship/12_uncouple
+    #Perk
+    execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/invis_detect/0
+
 #Zombie
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:zombie_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/zombie/break/0

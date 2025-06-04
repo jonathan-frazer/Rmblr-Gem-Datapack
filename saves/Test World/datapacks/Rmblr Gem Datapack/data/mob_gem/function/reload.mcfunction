@@ -108,10 +108,13 @@ scoreboard objectives add mbGemWardHeart dummy
 #Wandering Trader
 scoreboard objectives add mbGemWanderInvis dummy
 
-
+#Wolf
+scoreboard objectives add mbGemWolfID dummy
 
 team add Intangible
 team modify Intangible collisionRule never
+
+setworldspawn 0 0 0
 
 schedule function mob_gem:mainhalfsec 10t
 schedule function mob_gem:mainsec 20t

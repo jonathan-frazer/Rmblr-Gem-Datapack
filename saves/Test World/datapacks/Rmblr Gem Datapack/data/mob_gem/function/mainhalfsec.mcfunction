@@ -51,7 +51,7 @@
 #Horse
     #Perk
     execute as @a[predicate=mob_gem:horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/apply
-    execute as @a[predicate=!mob_gem:horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/remove
+    execute as @a[predicate=!mob_gem:horse_gem/has_item,predicate=!mob_gem:skeleton_horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/remove
 
 #Husk
     #Perk
@@ -95,7 +95,6 @@
 #Skeleton-Horse
     #Perk
     execute as @a[predicate=mob_gem:skeleton_horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/skeleton_horse/step_height/apply
-    execute as @a[predicate=!mob_gem:skeleton_horse_gem/has_item,tag=mbGemHorseHeight] run function mob_gem:mob_gem/skeleton_horse/step_height/remove
 
 #Tadpole
     #Perk

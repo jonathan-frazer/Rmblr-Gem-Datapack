@@ -315,6 +315,7 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wolf_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s unless predicate mob_gem:sneak run function mob_gem:mob_gem/wolf/companionship/0_trigger
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:wolf_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s if predicate mob_gem:sneak run function mob_gem:mob_gem/wolf/companionship/12_uncouple
+
     #Perk
     execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/invis_detect/0
 

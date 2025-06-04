@@ -9,4 +9,4 @@ playsound entity.bat.ambient master @a[distance=..12] ~ ~ ~ 1 1.1 1
 playsound entity.bat.ambient master @a[distance=..12] ~ ~ ~ 1 1.1 1
 
 #Echolocate
-effect give @e[type=!#mob_gem:nalive] glowing 2 1 true
+effect give @e[type=!#mob_gem:nalive,distance=0.4..32] glowing 2 1 true

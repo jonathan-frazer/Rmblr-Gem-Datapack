@@ -64,6 +64,29 @@
     execute as @a[predicate=!mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] run function mob_gem:mob_gem/husk/buff/remove
     execute as @a[predicate=mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] unless predicate mob_gem:husk_gem/day_time run function mob_gem:mob_gem/husk/buff/remove
 
+#Piglin
+    #Perk
+        #Boots
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=!mbGemGoldBootBoost] if predicate mob_gem:piglin_gem/wearing_gold/boots run function mob_gem:mob_gem/piglin/gold_armor_boost/boots/apply
+        execute as @a[predicate=!mob_gem:piglin_gem/has_item,tag=mbGemGoldBootBoost] run function mob_gem:mob_gem/piglin/gold_armor_boost/boots/remove
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=mbGemGoldBootBoost] unless predicate mob_gem:piglin_gem/wearing_gold/boots run function mob_gem:mob_gem/piglin/gold_armor_boost/boots/remove
+
+        #Legs
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=!mbGemGoldLegsBoost] if predicate mob_gem:piglin_gem/wearing_gold/leggings run function mob_gem:mob_gem/piglin/gold_armor_boost/legs/apply
+        execute as @a[predicate=!mob_gem:piglin_gem/has_item,tag=mbGemGoldLegsBoost] run function mob_gem:mob_gem/piglin/gold_armor_boost/legs/remove
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=mbGemGoldLegsBoost] unless predicate mob_gem:piglin_gem/wearing_gold/leggings run function mob_gem:mob_gem/piglin/gold_armor_boost/legs/remove
+
+        #Chest
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=!mbGemGoldChestBoost] if predicate mob_gem:piglin_gem/wearing_gold/chestplate run function mob_gem:mob_gem/piglin/gold_armor_boost/chest/apply
+        execute as @a[predicate=!mob_gem:piglin_gem/has_item,tag=mbGemGoldChestBoost] run function mob_gem:mob_gem/piglin/gold_armor_boost/chest/remove
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=mbGemGoldChestBoost] unless predicate mob_gem:piglin_gem/wearing_gold/chestplate run function mob_gem:mob_gem/piglin/gold_armor_boost/chest/remove
+
+        #Helmet
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=!mbGemGoldHelmBoost] if predicate mob_gem:piglin_gem/wearing_gold/helmet run function mob_gem:mob_gem/piglin/gold_armor_boost/head/apply
+        execute as @a[predicate=!mob_gem:piglin_gem/has_item,tag=mbGemGoldHelmBoost] run function mob_gem:mob_gem/piglin/gold_armor_boost/head/remove
+        execute as @a[predicate=mob_gem:piglin_gem/has_item,tag=mbGemGoldHelmBoost] unless predicate mob_gem:piglin_gem/wearing_gold/helmet run function mob_gem:mob_gem/piglin/gold_armor_boost/head/remove
+
+
 #Piglin Brute
     #Perk
     execute as @a[predicate=mob_gem:piglin_brute_gem/has_item,tag=!mbGemGoldBoost] if predicate mob_gem:piglin_brute_gem/holding_gold_tool run function mob_gem:mob_gem/piglin_brute/gold_boost/apply

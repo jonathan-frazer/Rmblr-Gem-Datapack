@@ -170,7 +170,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 
 #Pig
     #Ability
-    execute as @a[predicate=mob_gem:pig_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/pig/carrot_buff/0_trigger
+    execute as @a[predicate=mob_gem:piglin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/piglin/trade/0_trigger
+
+#Piglin
+    #Ability
+    execute as @a[predicate=mob_gem:hoglin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/hoglin/crim_boost/0_trigger
 
 #Piglin Brute
     #Ability

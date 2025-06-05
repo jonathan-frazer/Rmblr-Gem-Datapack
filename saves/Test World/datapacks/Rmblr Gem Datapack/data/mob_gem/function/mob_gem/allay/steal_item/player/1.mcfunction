@@ -1,5 +1,3 @@
-say @s
-
 #Steal from Hotbar if SlotNumber does not Exceed
 $execute unless score mbGemStealOffset mbGem_fakePlayer matches ..$(Slot) run function mob_gem:mob_gem/allay/steal_item/player/2h with storage mob_gem:auxillary Allay.StolenItems
 

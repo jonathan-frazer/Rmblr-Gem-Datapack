@@ -48,6 +48,11 @@
     #Perk
     execute as @a[predicate=mob_gem:evoker_gem/has_item] positioned as @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] positioned as @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate
 
+#Hoglin
+    #Perk
+    execute as @a[predicate=mob_gem:hoglin_gem/has_item,tag=!mbGemHoglinSteady] run function mob_gem:mob_gem/hoglin/knockback_res/apply
+    execute as @a[predicate=!mob_gem:hoglin_gem/has_item,tag=mbGemHoglinSteady] run function mob_gem:mob_gem/hoglin/knockback_res/remove
+
 #Horse
     #Perk
     execute as @a[predicate=mob_gem:horse_gem/has_item,tag=!mbGemHorseHeight] run function mob_gem:mob_gem/horse/step_height/apply
@@ -133,6 +138,11 @@
 #Warden
     #Ability
     execute as @a[scores={mbGemWardHeart=1..}] run function mob_gem:mob_gem/warden/sonic_boom/6_black_heart
+
+#Zoglin
+    #Perk
+    execute as @a[predicate=mob_gem:zoglin_gem/has_item,tag=!mbGemZoglinSteady] run function mob_gem:mob_gem/zoglin/knockback_res/apply
+    execute as @a[predicate=!mob_gem:zoglin_gem/has_item,tag=mbGemZoglinSteady] run function mob_gem:mob_gem/zoglin/knockback_res/remove
 
 #Zombie
     #Perk

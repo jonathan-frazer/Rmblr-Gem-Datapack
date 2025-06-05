@@ -127,7 +127,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:guardian_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/guardian/laser/0_trigger
     execute as @e[type=!#mob_gem:nalive,scores={mbGemGuardianTimer=1..}] run function mob_gem:mob_gem/guardian/laser/4_dur
     execute as @a[predicate=mob_gem:guardian_gem/holding_item] if predicate mob_gem:guardian_gem/laser_target at @s run function mob_gem:mob_gem/guardian/laser/6_target
-    
+
+#Hoglin
+    #Ability
+    execute as @a[predicate=mob_gem:hoglin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/hoglin/crim_boost/0_trigger
 
 #Horse
     #Ability
@@ -318,6 +321,10 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 
     #Perk
     execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/invis_detect/0
+
+#Zoglin
+    #Ability
+    execute as @a[predicate=mob_gem:zoglin_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/zoglin/warp_boost/0_trigger
 
 #Zombie
     #Ability

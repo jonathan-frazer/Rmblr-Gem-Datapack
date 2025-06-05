@@ -59,6 +59,10 @@ execute as @a run function mob_gem:mob_gem/cooldown_bar
     #Ability
     execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/companionship/4_scan
 
+#Zombified Piglin
+    #Perk
+    execute as @e[type=!#mob_gem:nalive,scores={mbZombPigTagTimer=1..}] run function mob_gem:mob_gem/zombified_piglin/aggro_boost/1_dur_sec
+
 #Entity Clean up
 scoreboard players add @e[tag=mbGemCleanUp] mbGem_CleanUp 1
 kill @e[tag=mbGemCleanUp,scores={mbGem_CleanUp=100..}]

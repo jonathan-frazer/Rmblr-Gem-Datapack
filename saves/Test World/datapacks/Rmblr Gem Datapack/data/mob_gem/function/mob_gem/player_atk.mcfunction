@@ -17,3 +17,6 @@ advancement revoke @s only mob_gem:player_atk
 
 #Wither 
     execute if predicate mob_gem:wither_gem/has_item as @e[type=!#mob_gem:nalive,distance=0.5..7,nbt={HurtTime:10s}] run function mob_gem:mob_gem/wither/atk
+
+#Zombified Piglin
+    execute if predicate mob_gem:zombified_piglin_gem/has_item as @e[type=!#mob_gem:nalive,type=!player,distance=..32,predicate=!mob_gem:zombified_piglin_gem/has_item,nbt={HurtTime:10s}] run function mob_gem:mob_gem/zombified_piglin/aggro_boost/0_tag

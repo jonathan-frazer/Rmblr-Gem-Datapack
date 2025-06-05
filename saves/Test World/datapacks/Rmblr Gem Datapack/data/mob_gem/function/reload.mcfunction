@@ -111,6 +111,10 @@ scoreboard objectives add mbGemWanderInvis dummy
 #Wolf
 scoreboard objectives add mbGemWolfID dummy
 
+#Zombified Piglin
+scoreboard objectives add mbZombPigTagTimer dummy
+scoreboard objectives add mbZombPigBuffTimer dummy
+
 team add Intangible
 team modify Intangible collisionRule never
 

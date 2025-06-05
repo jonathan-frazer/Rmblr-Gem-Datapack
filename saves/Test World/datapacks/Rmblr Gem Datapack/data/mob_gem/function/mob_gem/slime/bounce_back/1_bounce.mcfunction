@@ -7,3 +7,4 @@ $execute if score slimeBounce mbGem_fakePlayer matches 10.. run damage @s $(fall
 
 #If any Mobs are around Damage them
 function mob_gem:mob_gem/slime/stomp/2_dmg with storage mob_gem:auxillary Slime
+tag @s remove mbGemSlimeStomp

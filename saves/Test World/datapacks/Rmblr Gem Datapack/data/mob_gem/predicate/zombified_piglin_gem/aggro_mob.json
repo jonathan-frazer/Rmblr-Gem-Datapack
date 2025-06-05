@@ -1,0 +1,10 @@
+{
+  "condition": "minecraft:entity_scores",
+  "entity": "direct_attacker",
+  "scores": {
+    "mbZombPigTagTimer": {
+      "min": 1,
+      "max": 256
+    }
+  }
+}

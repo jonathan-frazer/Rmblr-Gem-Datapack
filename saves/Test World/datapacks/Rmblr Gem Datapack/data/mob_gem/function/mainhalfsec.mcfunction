@@ -173,6 +173,10 @@
     execute as @a[predicate=!mob_gem:zombie_gem/has_item,tag=mbGemZombieBuff] run function mob_gem:mob_gem/zombie/buff/remove
     execute as @a[predicate=mob_gem:zombie_gem/has_item,tag=mbGemZombieBuff] unless predicate mob_gem:zombie_gem/night_time run function mob_gem:mob_gem/zombie/buff/remove
 
+#Zombified Piglin
+    #Perk
+    execute as @a[scores={mbZombPigBuffTimer=1..}] run function mob_gem:mob_gem/zombified_piglin/aggro_boost/4_buff_dur
+
 #Cycle every Half Second
 schedule function mob_gem:mainhalfsec 10t
 

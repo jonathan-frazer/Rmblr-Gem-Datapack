@@ -10,4 +10,13 @@
 #Turtle
     execute if predicate mob_gem:turtle_gem/has_item if predicate mob_gem:turtle_gem/scute_chance run function mob_gem:mob_gem/turtle/scute/0
 
+#Zombified Piglin
+    #Combat Tagging
+    execute on attacker if predicate mob_gem:zombified_piglin_gem/has_item as @p[distance=..0.1,predicate=!mob_gem:zombified_piglin_gem/has_item] run function mob_gem:mob_gem/zombified_piglin/aggro_boost/0_tag
+
+    #Buff Application
+    execute if predicate mob_gem:zombified_piglin_gem/has_item on attacker unless score @s mbZombPigTagTimer matches 1.. as @p[distance=..0.1,predicate=mob_gem:zombified_piglin_gem/has_item] unless score @s mbZombPigBuffTimer matches 1.. run function mob_gem:mob_gem/zombified_piglin/aggro_boost/3_buff
+
+    
+
 advancement revoke @s only mob_gem:player_hurt

@@ -20,6 +20,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[tag=mbGemBeeSpawning] at @s run function mob_gem:mob_gem/bee/swarm/2_bee_spawning
     execute as @e[type=bee,name=GemBeeSpawn] run function mob_gem:mob_gem/bee/swarm/4_bee_dur
 
+#Blaze
+    #Ability
+    execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:blaze_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/blaze/shoot_fireball/0_trigger
+    execute as @a[scores={mbGem_blazeVolley=1..}] run function mob_gem:mob_gem/blaze/shoot_fireball/1_dur
+
 #Bogged
     #Perk
     execute as @a[predicate=mob_gem:bogged_gem/has_item,scores={mbGemShootBow=1..3}] at @s run function mob_gem:mob_gem/bogged/poison_arrow/0
@@ -41,8 +46,6 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
 #Cave Spider
     #Ability
     execute as @a[predicate=mob_gem:cave_spider_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/cave_spider/web_bomb/0_aim
-    execute as @e[type=falling_block,name="webBombBlock"] at @s unless block ~ ~-0.5 ~ #mob_gem:passable run function mob_gem:mob_gem/cave_spider/web_bomb/2_lay
-    execute as @e[type=area_effect_cloud,name="mbWebBombPrimer"] run function mob_gem:mob_gem/cave_spider/web_bomb/3_incubate
 
 #Chicken
     #Ability
@@ -109,6 +112,11 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:fox_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. positioned ^ ^ ^0.1 run function mob_gem:mob_gem/fox/pounce/0
     execute as @a[scores={mbGem_foxPounce=1..}] at @s run function mob_gem:mob_gem/fox/pounce/4_dur
 
+#Ghast
+    #Ability
+    execute as @a[predicate=mob_gem:ghast_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/ghast/fireball/0_trigger
+    execute as @a[scores={mbGemGhastFireball=1..}] run function mob_gem:mob_gem/ghast/fireball/1_dur
+
 #Glow Squid
     #Ability
     execute as @a[predicate=mob_gem:glow_squid_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/glow_squid/blind/0_trigger
@@ -156,7 +164,13 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:mooshroom_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/mooshroom/super_stew/0_trigger
     #Perk
     execute as @a[predicate=mob_gem:mooshroom_gem/has_item,predicate=mob_gem:mooshroom_gem/holding_sus_stew,predicate=!mob_gem:mooshroom_gem/holding_super_stew] run function mob_gem:mob_gem/mooshroom/reveal/0
+
+#Panda
+    #Ability
+    execute as @a[predicate=mob_gem:panda_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. if predicate mob_gem:on_ground run function mob_gem:mob_gem/panda/roll/0_trigger
+    execute as @a[scores={mbGemPandaRoll=1..}] at @s run function mob_gem:mob_gem/panda/roll/1_roll_dur
     
+
 #Parrot
     #Ability
     execute as @a[scores={mbGem_Click=1..3},predicate=mob_gem:parrot_gem/holding_item] unless score @s mbGem_AbilityCooldown matches 1.. at @s run function mob_gem:mob_gem/parrot/0

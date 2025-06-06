@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "effects": {
+        "minecraft:weakness": {
+          "amplifier": 13,
+          "visible": false
+        }
+      }
+    }
+  }

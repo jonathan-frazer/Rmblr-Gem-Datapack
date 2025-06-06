@@ -16,6 +16,10 @@ execute as @a run function mob_gem:mob_gem/cooldown_bar
     execute as @a[predicate=mob_gem:axolotl_gem/has_item_and_is_in_water,tag=!mbGemAxlBoost] run function mob_gem:mob_gem/axolotl/apply
     execute as @a[predicate=!mob_gem:axolotl_gem/has_item_and_is_in_water,tag=mbGemAxlBoost] run function mob_gem:mob_gem/axolotl/remove
 
+#Blaze
+    #Perk
+    execute as @a[predicate=mob_gem:blaze_gem/has_item] run function mob_gem:mob_gem/blaze/fire_aura/0_dur
+
 #Cow
     #Perk
     execute as @a[predicate=mob_gem:cow_gem/has_item] run function mob_gem:mob_gem/cow/remove_debuffs
@@ -24,10 +28,13 @@ execute as @a run function mob_gem:mob_gem/cooldown_bar
     #Perk
     effect give @a[predicate=mob_gem:dolphin_gem/has_item] dolphins_grace 2 1 true
 
+#Ghast
+    #Perk
+    execute as @a[predicate=mob_gem:ghast_gem/has_ghast_tear,predicate=mob_gem:ghast_gem/has_item] run function mob_gem:mob_gem/ghast/tear_buff/0_sec
+
 #Iron Golem
     #Perk
     execute as @a[predicate=mob_gem:iron_golem_gem/has_item] run function mob_gem:mob_gem/iron_golem/iron_flesh/0
-
 
 #Rabbit
     #Perk

@@ -3,8 +3,7 @@
     execute as @a[predicate=mob_gem:bat_gem/has_item,predicate=mob_gem:bat_gem/underground] run function mob_gem:mob_gem/bat/night_vision/apply
     execute as @a[predicate=mob_gem:bat_gem/has_item,predicate=!mob_gem:bat_gem/underground,predicate=mob_gem:bat_gem/has_night_vision] run function mob_gem:mob_gem/bat/night_vision/remove
     execute as @a[predicate=!mob_gem:bat_gem/has_item,predicate=mob_gem:bat_gem/has_night_vision] run function mob_gem:mob_gem/bat/night_vision/remove
-
-
+    
 #Breeze
     #Perk
     execute as @a[predicate=mob_gem:breeze_gem/has_item,tag=!mbGemBreezePad] run function mob_gem:mob_gem/breeze/remove_fall_dmg/apply
@@ -63,6 +62,11 @@
     execute as @a[predicate=mob_gem:husk_gem/has_item,tag=!mbGemHuskBuff] if predicate mob_gem:husk_gem/day_time run function mob_gem:mob_gem/husk/buff/apply
     execute as @a[predicate=!mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] run function mob_gem:mob_gem/husk/buff/remove
     execute as @a[predicate=mob_gem:husk_gem/has_item,tag=mbGemHuskBuff] unless predicate mob_gem:husk_gem/day_time run function mob_gem:mob_gem/husk/buff/remove
+
+#Panda
+    #Perk
+    execute as @a[predicate=mob_gem:panda_gem/has_item] if predicate mob_gem:panda_gem/holding_bamboo run function mob_gem:mob_gem/panda/eat_bamboo/apply
+    execute as @a[predicate=!mob_gem:panda_gem/has_item] if predicate mob_gem:panda_gem/holding_bamboo run function mob_gem:mob_gem/panda/eat_bamboo/remove
 
 #Piglin
     #Perk
@@ -179,4 +183,3 @@
 
 #Cycle every Half Second
 schedule function mob_gem:mainhalfsec 10t
-

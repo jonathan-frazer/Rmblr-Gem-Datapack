@@ -1,0 +1,2 @@
+execute rotated as @s run summon area_effect_cloud ^ ^ ^0.75 {CustomName:'{"text":"ghastFireballPtr"}',Duration:1}
+data modify storage mob_gem:auxillary Ghast.throwPos set from entity @n[type=area_effect_cloud,distance=..2,name="ghastFireballPtr"] Pos

@@ -15,6 +15,9 @@ data modify storage mob_gem:auxillary Allay.StolenItems.MobItem set value {}
 #Armadillo
 scoreboard objectives add mbGemArmadilloShield dummy
 
+#Blaze
+scoreboard objectives add mbGem_blazeVolley dummy
+
 #Camel
 scoreboard objectives add mbGem_camelGrow dummy
 
@@ -50,6 +53,9 @@ scoreboard objectives add mbGem_foxPounce dummy
 #Frog
 scoreboard objectives add mbGemFrogpull dummy
 
+#Ghast
+scoreboard objectives add mbGemGhastFireball dummy
+
 #Glow Squid
 scoreboard objectives add mbGemGSqdBlind dummy
 
@@ -62,6 +68,9 @@ scoreboard objectives add mbGemGuardianTimer dummy
 
 #Horse
 scoreboard objectives add mbGem_nonHorseRide dummy
+
+#Panda
+scoreboard objectives add mbGemPandaRoll dummy
 
 #Parrot
 scoreboard objectives add mbGemDJumptimer dummy

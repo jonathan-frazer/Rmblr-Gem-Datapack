@@ -1,5 +1,5 @@
 #Action Bar
-title @s actionbar {"color":"dark_aqua","text":"Boom","bold": true}
+tellraw @s {"color":"dark_aqua","text":"Boom","bold": true}
 
 #Deal Dmg
 execute positioned ^ ^ ^1 run function mob_gem:mob_gem/warden/sonic_boom/3_atk

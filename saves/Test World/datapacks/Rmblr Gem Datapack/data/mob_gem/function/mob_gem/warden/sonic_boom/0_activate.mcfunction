@@ -15,4 +15,4 @@ summon area_effect_cloud ~ ~ ~ {CustomName:'"mbGemBoomLock"',Duration:40}
 tp @n[type=area_effect_cloud,name="mbGemBoomLock"] @s
 
 #Clear Actionbar
-title @s actionbar [{"text":"Sonic","color":"dark_aqua"}]
+tellraw @s [{"text":"Sonic","color":"dark_aqua"}]

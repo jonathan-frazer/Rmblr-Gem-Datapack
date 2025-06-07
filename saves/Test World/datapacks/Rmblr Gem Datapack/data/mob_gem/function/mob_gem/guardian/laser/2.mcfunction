@@ -1,7 +1,8 @@
 scoreboard players set raycast mbGem_fakePlayer -1
 
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 8
 execute at @s run playsound block.beacon.activate master @a[distance=..12] ~ ~ ~ 1 1.5 1
 
 #Laser Tag

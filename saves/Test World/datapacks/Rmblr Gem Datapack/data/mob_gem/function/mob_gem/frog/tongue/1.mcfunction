@@ -13,4 +13,5 @@ tag @p[predicate=mob_gem:frog_gem/holding_item] add mbGemFrogTongue
 effect give @s weakness 1 17 true
 
 #Cooldown
-scoreboard players set @p[predicate=mob_gem:frog_gem/holding_item] mbGem_AbilityCooldown 20
+scoreboard players set @p[predicate=mob_gem:frog_gem/holding_item,predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 20
+scoreboard players set @p[predicate=mob_gem:frog_gem/holding_item,predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 10

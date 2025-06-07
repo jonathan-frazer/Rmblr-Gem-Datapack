@@ -1,5 +1,6 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 10
 
 #Initialization
 execute as @e[distance=..24,type=skeleton,predicate=!mob_gem:skeleton_horse_gem/has_item] run function mob_gem:mob_gem/skeleton_horse/pacify/1_init

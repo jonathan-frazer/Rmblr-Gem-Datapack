@@ -1,11 +1,11 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 4
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 4
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 2
 
 #Remove Gravity
 attribute @s generic.gravity modifier add mob_gem:sniffer_dig_gravity -1.0 add_multiplied_base
 attribute @s generic.movement_speed modifier add mob_gem:sniffer_dig_speed -1.0 add_multiplied_base
 attribute @s generic.knockback_resistance modifier add mob_gem:sniffer_dig_kb_res 1.0 add_value
-
 
 #Burrowing
 scoreboard players set @s mbGem_snifferBurrow 1

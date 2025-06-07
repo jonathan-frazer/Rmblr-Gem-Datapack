@@ -1,4 +1,5 @@
-scoreboard players set @s mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 8
 
 #Start Roar
 scoreboard players set @s mbGemRavagerRoar 1

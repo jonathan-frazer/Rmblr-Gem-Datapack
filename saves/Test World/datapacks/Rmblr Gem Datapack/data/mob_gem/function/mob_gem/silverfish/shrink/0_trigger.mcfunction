@@ -1,5 +1,6 @@
 #Trigger
-scoreboard players set @s mbGem_AbilityCooldown 40
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 40
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 30
 
 #Activate Shrink
 scoreboard players set @s mbGemShrinkSilver 1

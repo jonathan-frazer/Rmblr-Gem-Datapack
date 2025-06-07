@@ -1,5 +1,6 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 8
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 8
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 5
 
 #Store Current Rotation
 data modify storage mob_gem:auxillary rabbit.rotX set from entity @s Rotation[0]

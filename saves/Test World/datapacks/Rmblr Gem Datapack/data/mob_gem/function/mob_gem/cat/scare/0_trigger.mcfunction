@@ -1,5 +1,6 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 20
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 20
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 10
 
 #Playsound
 playsound entity.cat.hiss master @a[distance=..8] ~ ~ ~ 1 0.9 1

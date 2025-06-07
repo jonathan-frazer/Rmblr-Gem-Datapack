@@ -1,4 +1,5 @@
-scoreboard players set @s mbGem_AbilityCooldown 8
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 8
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 4
 
 #Playsound
 playsound entity.iron_golem.attack master @a[distance=..12] ^ ^ ^3 1 1.1 1

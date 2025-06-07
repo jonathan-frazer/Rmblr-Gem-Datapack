@@ -8,4 +8,5 @@ effect give @e[type=!#mob_gem:nalive,distance=..12] levitation 7 2 false
 effect give @s slow_falling 11 0 true
 
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 7

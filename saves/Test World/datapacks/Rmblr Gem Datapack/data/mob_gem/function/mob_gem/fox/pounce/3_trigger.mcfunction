@@ -2,7 +2,8 @@
 playsound entity.fox.aggro master @a[distance=..12] ~ ~ ~ 1 0.85 1
 
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 20
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 20
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 11
 
 #Jump
 effect give @s levitation 1 21 true

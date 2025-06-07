@@ -1,5 +1,6 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 10
 
 #Potion Effects
 effect give @s strength 5 3 false

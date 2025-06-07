@@ -1,5 +1,6 @@
 #Cooldown
-scoreboard players set @s mbGem_AbilityCooldown 5
+scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 5
+scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 3
 
 #Break
 execute positioned ~ ~0.3 ~ positioned ^ ^ ^1 unless block ~ ~ ~ #mob_gem:unbreakable run setblock ~ ~ ~ air destroy

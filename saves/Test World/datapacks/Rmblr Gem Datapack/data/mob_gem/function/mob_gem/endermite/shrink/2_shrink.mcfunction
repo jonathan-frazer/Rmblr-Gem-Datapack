@@ -1,0 +1,3 @@
+#Apply Growth Coefficient
+attribute @s generic.scale modifier remove mob_gem:endermite_size
+$attribute @s generic.scale modifier add mob_gem:endermite_size $(shrinkCoefficient) add_multiplied_base

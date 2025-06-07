@@ -47,6 +47,10 @@ scoreboard objectives add mbGemTrident used:trident
 scoreboard objectives add mbGemEGuardianLaser dummy
 scoreboard objectives add mbGemEGuardianTimer dummy
 
+#Endermite
+scoreboard objectives add mbGemShrinkEnder dummy
+scoreboard objectives add mbGemEnderPearlUse used:ender_pearl
+
 #Fox
 scoreboard objectives add mbGem_foxPounce dummy
 
@@ -121,7 +125,7 @@ scoreboard objectives add mbGemWardHeart dummy
 scoreboard objectives add mbGemWanderInvis dummy
 
 #Wolf
-scoreboard objectives add mbGemWolfID dummy
+scoreboard objectives add mbGemTrackingID dummy
 
 #Zombified Piglin
 scoreboard objectives add mbZombPigTagTimer dummy

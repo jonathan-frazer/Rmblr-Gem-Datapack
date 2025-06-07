@@ -68,7 +68,7 @@ execute as @a[predicate=mob_gem:having_gem] run function mob_gem:mob_gem/cooldow
 
 #Wolf
     #Ability
-    execute as @a[predicate=mob_gem:wolf_gem/has_item] positioned as @s run function mob_gem:mob_gem/wolf/companionship/4_scan
+    execute as @a[predicate=mob_gem:wolf_gem/has_item] at @s run function mob_gem:mob_gem/wolf/companionship/4_scan
 
 #Zombified Piglin
     #Perk

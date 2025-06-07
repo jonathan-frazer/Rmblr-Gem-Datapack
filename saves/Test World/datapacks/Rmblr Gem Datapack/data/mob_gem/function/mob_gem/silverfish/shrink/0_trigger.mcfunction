@@ -1,5 +1,5 @@
 #Trigger
-scoreboard players set @s mbGem_AbilityCooldown 30
+scoreboard players set @s mbGem_AbilityCooldown 40
 
 #Activate Shrink
 scoreboard players set @s mbGemShrinkSilver 1

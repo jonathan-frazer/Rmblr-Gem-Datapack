@@ -11,4 +11,4 @@ attribute @s generic.knockback_resistance modifier add mob_gem:sniffer_dig_kb_re
 scoreboard players set @s mbGem_snifferBurrow 1
 
 execute at @s rotated ~ 0 run summon armor_stand ^ ^2 ^12 {CustomName:'{"text":"sniffBurrowLocation"}',Motion:[0.0,-4.0,0.0],Invisible:1b}
-execute positioned as @n[type=armor_stand,name=sniffBurrowLocation,distance=..70] run tp @n[type=armor_stand,distance=..1,name=sniffBurrowLocation] ~ ~ ~ ~ ~
+execute at @n[type=armor_stand,name=sniffBurrowLocation,distance=..70] run tp @n[type=armor_stand,distance=..1,name=sniffBurrowLocation] ~ ~ ~ ~ ~

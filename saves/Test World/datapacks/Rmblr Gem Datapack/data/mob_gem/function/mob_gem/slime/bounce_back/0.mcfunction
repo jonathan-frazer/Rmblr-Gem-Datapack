@@ -7,4 +7,4 @@ execute store result storage mob_gem:auxillary Slime.fallDmg double 0.05 run sco
 execute store result storage mob_gem:auxillary Slime.stompDmg double 1.25 run scoreboard players get slimeBounce mbGem_fakePlayer
 
 #Bounce Up using Data
-execute if score slimeBounce mbGem_fakePlayer matches 4..255 positioned as @s run function mob_gem:mob_gem/slime/bounce_back/1_bounce with storage mob_gem:auxillary Slime
+execute if score slimeBounce mbGem_fakePlayer matches 4..255 at @s run function mob_gem:mob_gem/slime/bounce_back/1_bounce with storage mob_gem:auxillary Slime

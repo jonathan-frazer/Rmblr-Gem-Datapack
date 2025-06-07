@@ -6,4 +6,4 @@ attribute @s generic.scale modifier add mob_gem:camel_height 0.65 add_multiplied
 scoreboard players set @s mbGem_camelGrow 1
 
 #Give Effects
-execute positioned as @s run function mob_gem:mob_gem/camel/grow/2_give_effects
+execute at @s run function mob_gem:mob_gem/camel/grow/2_give_effects

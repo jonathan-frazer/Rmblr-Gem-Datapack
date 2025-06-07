@@ -40,12 +40,12 @@
 
 #Elder Guardian
     #Perk
-    execute as @a[predicate=mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] positioned as @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/effect
-    execute as @a[predicate=!mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] positioned as @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/remove
+    execute as @a[predicate=mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] at @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/effect
+    execute as @a[predicate=!mob_gem:elder_guardian_gem/has_item,tag=mbEGuardianFatigue] at @s run function mob_gem:mob_gem/elder_guardian/mining_fatigue/remove
 
 #Evoker
     #Perk
-    execute as @a[predicate=mob_gem:evoker_gem/has_item] positioned as @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] positioned as @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate
+    execute as @a[predicate=mob_gem:evoker_gem/has_item] at @s as @e[type=vex,predicate=mob_gem:evoker_gem/vex_targeting,distance=..4] at @s run function mob_gem:mob_gem/evoker/vex_immune/0_terminate
 
 #Hoglin
     #Perk
@@ -113,6 +113,11 @@
     #Perk
     execute as @a[predicate=mob_gem:salmon_gem/has_item] at @s anchored eyes run function mob_gem:mob_gem/salmon/haste
     execute as @a[predicate=!mob_gem:salmon_gem/has_item,predicate=mob_gem:salmon_gem/haste_effect] run effect clear @s haste
+
+#Silverfish
+    #Perk
+    execute as @a[predicate=mob_gem:silverfish_gem/has_item] if predicate mob_gem:silverfish_gem/holding_cobblestone run function mob_gem:mob_gem/silverfish/eat_cobblestone/apply
+    execute as @a[predicate=!mob_gem:silverfish_gem/has_item] if predicate mob_gem:silverfish_gem/holding_cobblestone run function mob_gem:mob_gem/silverfish/eat_cobblestone/remove
 
 #Slime
     #Perk

@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand mob_gem:silverfish/cobblestone_edible

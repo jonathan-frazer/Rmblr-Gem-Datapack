@@ -1,4 +1,4 @@
 #Compare Third ID
-execute store result score @s mbGemWolfID run data get entity @s UUID[2] 1
+execute store result score @s mbGemTrackingID run data get entity @s UUID[2] 1
 
-execute if score @s mbGemWolfID = wolfCompanion2 mbGemWolfID run function mob_gem:mob_gem/wolf/companionship/8_check
+execute if score @s mbGemTrackingID = wolfCompanion2 mbGemTrackingID run function mob_gem:mob_gem/wolf/companionship/8_check

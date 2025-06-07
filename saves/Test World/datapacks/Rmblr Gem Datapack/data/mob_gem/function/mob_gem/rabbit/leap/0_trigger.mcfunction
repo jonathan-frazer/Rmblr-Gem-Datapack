@@ -13,7 +13,7 @@ attribute @s generic.gravity modifier add mob_gem:leap_gravity -0.5 add_multipli
     #Height
     effect give @s levitation 1 10 true
     #Sound
-    execute positioned as @s run playsound entity.rabbit.jump master @a[distance=..12] ~ ~ ~ 1 1 1
-    execute positioned as @s run playsound entity.player.big_fall master @a[distance=..12] ~ ~ ~ 1 1 1
+    execute at @s run playsound entity.rabbit.jump master @a[distance=..12] ~ ~ ~ 1 1 1
+    execute at @s run playsound entity.player.big_fall master @a[distance=..12] ~ ~ ~ 1 1 1
     #Length
     scoreboard players set @s mbGemLeap 1

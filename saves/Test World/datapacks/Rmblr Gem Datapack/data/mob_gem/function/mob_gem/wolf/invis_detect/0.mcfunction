@@ -1,1 +1,1 @@
-execute positioned as @e[distance=0.1..8,type=!#mob_gem:nalive,predicate=mob_gem:wolf_gem/is_invis] run function mob_gem:mob_gem/wolf/invis_detect/1_fx
+execute at @e[distance=0.1..8,type=!#mob_gem:nalive,predicate=mob_gem:wolf_gem/is_invis] run function mob_gem:mob_gem/wolf/invis_detect/1_fx

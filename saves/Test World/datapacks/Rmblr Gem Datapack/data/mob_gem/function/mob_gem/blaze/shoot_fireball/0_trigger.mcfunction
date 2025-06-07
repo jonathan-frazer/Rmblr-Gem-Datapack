@@ -5,4 +5,4 @@ scoreboard players set @s mbGem_AbilityCooldown 12
 scoreboard players set @s mbGem_blazeVolley 1
 
 #Activate Sound
-execute positioned as @s run playsound entity.blaze.burn master @a[distance=..12] ~ ~ ~ 1 0.85 1
+execute at @s run playsound entity.blaze.burn master @a[distance=..12] ~ ~ ~ 1 0.85 1

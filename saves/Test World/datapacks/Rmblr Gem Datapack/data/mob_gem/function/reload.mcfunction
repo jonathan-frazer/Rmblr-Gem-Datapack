@@ -1,6 +1,5 @@
 say Mob Gem Datapack Loaded!
-##CHANGE THIS WHEN FINISHED
-data remove storage mob_gem:gem_acquire GemsCurrentlySpawned
+
 scoreboard objectives add mbGem_fakePlayer dummy
 scoreboard objectives add mbGem_Click used:warped_fungus_on_a_stick
 scoreboard objectives add mbGem_AbilityCooldown dummy
@@ -138,6 +137,7 @@ scoreboard objectives add mbZombPigBuffTimer dummy
 team add Intangible
 team modify Intangible collisionRule never
 
+#Set Spawn
 setworldspawn 0 0 0
 
 schedule function mob_gem:mainhalfsec 10t

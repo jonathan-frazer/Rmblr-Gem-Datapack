@@ -6,6 +6,7 @@ scoreboard objectives add mbGem_Click used:warped_fungus_on_a_stick
 scoreboard objectives add mbGem_AbilityCooldown dummy
 scoreboard objectives add mbGem_CleanUp dummy
 scoreboard objectives add previousGameType dummy
+scoreboard objectives add mbGemBanCount dummy
 scoreboard objectives add mbGemjumpCount minecraft.custom:jump
 
 #Allay
@@ -46,6 +47,9 @@ scoreboard objectives add mbGemTrident used:trident
 #Elder Guardian
 scoreboard objectives add mbGemEGuardianLaser dummy
 scoreboard objectives add mbGemEGuardianTimer dummy
+
+#Ender Dragon
+scoreboard objectives add mbGemDragonBreath dummy
 
 #Endermite
 scoreboard objectives add mbGemShrinkEnder dummy

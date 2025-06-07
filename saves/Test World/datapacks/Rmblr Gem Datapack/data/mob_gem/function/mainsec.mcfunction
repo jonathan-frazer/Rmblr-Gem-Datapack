@@ -5,6 +5,8 @@ execute as @e[type=item,tag=mbGemitemInvul] run data modify entity @s Age set va
 scoreboard players remove @a[scores={mbGem_AbilityCooldown=1..}] mbGem_AbilityCooldown 1
 execute as @a[predicate=mob_gem:having_gem] run function mob_gem:mob_gem/cooldown_bar
 
+#Ban Items
+execute as @a run function mob_gem:banned_items/0
 
 #Armadillo
     #Perk

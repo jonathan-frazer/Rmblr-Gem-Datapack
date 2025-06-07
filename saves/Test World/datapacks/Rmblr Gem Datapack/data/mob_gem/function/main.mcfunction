@@ -85,6 +85,15 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:sneak,tag=!mbEGuardianFatigue] run function mob_gem:mob_gem/elder_guardian/mining_fatigue/apply
     execute as @a[predicate=mob_gem:elder_guardian_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:sneak,tag=mbEGuardianFatigue] run function mob_gem:mob_gem/elder_guardian/mining_fatigue/remove
 
+#Ender Dragon
+    #Ability
+    execute as @a[predicate=mob_gem:ender_dragon_gem/holding_item,scores={mbGem_Click=1..3}] unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/ender_dragon/breath/0_trigger
+    execute as @a[scores={mbGemDragonBreath=1..}] at @s anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/ender_dragon/breath/1_dur
+    execute as @e[type=area_effect_cloud,name="dragonBreathFlame"] at @s run function mob_gem:mob_gem/ender_dragon/breath/2_flame
+    #Perk
+    execute as @e[type=end_crystal] at @s run function mob_gem:mob_gem/ender_dragon/heal_crystal/0_crystal
+
+
 #Enderman
     #Ability
     execute as @a[predicate=mob_gem:enderman_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. anchored eyes positioned ^ ^ ^0.1 run function mob_gem:mob_gem/enderman/teleport/0

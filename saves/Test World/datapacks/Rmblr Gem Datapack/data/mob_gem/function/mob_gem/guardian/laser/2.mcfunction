@@ -3,6 +3,8 @@ scoreboard players set raycast mbGem_fakePlayer -1
 #Cooldown
 scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 15
 scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 8
+title @s[scores={mbGem_AbilityCooldown=1..}] actionbar [{"color":"#ca9140","text":"Cooldown: "},{"color":"#1BD01B","score":{"name":"@s","objective":"mbGem_AbilityCooldown"}},{"color":"#1bd01b","text":"s"}]
+
 execute at @s run playsound block.beacon.activate master @a[distance=..12] ~ ~ ~ 1 1.5 1
 
 #Laser Tag

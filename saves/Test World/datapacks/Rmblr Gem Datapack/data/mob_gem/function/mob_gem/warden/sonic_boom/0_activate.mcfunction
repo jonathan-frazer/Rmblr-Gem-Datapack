@@ -3,6 +3,7 @@ scoreboard players set @s mbGemSonicBoom 1
 #Apply Cooldown
 scoreboard players set @s[predicate=!mob_gem:having_dragon_egg] mbGem_AbilityCooldown 20
 scoreboard players set @s[predicate=mob_gem:having_dragon_egg] mbGem_AbilityCooldown 11
+title @s[scores={mbGem_AbilityCooldown=1..}] actionbar [{"color":"#ca9140","text":"Cooldown: "},{"color":"#1BD01B","score":{"name":"@s","objective":"mbGem_AbilityCooldown"}},{"color":"#1bd01b","text":"s"}]
 
 #Playsound
 execute at @s run playsound block.beacon.activate master @a[distance=..32] ^ ^0.75 ^1 0.75 2 0.75

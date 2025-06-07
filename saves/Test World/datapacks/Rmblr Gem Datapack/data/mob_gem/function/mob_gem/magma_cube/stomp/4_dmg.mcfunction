@@ -1,0 +1,3 @@
+$execute as @e[type=!#mob_gem:nalive,distance=..5,predicate=!mob_gem:magma_cube_gem/has_item] run damage @s $(stompDmg) lava by @p[predicate=mob_gem:magma_cube_gem/has_item]
+execute as @e[type=!#mob_gem:nalive,distance=..5,predicate=!mob_gem:magma_cube_gem/has_item] run data modify entity @s Fire set value 120s
+execute as @e[type=!#mob_gem:nalive,distance=..5,predicate=!mob_gem:magma_cube_gem/has_item] at @s run setblock ~ ~ ~ fire

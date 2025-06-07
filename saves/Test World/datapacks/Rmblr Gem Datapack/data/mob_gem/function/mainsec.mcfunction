@@ -36,6 +36,10 @@ execute as @a[predicate=mob_gem:having_gem] run function mob_gem:mob_gem/cooldow
     #Perk
     execute as @a[predicate=mob_gem:iron_golem_gem/has_item] run function mob_gem:mob_gem/iron_golem/iron_flesh/0
 
+#Magma Cube
+    #Perk
+    execute as @a[predicate=mob_gem:magma_cube_gem/has_item] run function mob_gem:mob_gem/magma_cube/fire_res/effect
+
 #Rabbit
     #Perk
     effect give @a[predicate=mob_gem:dolphin_gem/has_item] dolphins_grace 2 1 true

@@ -69,6 +69,9 @@ scoreboard objectives add mbGemGuardianTimer dummy
 #Horse
 scoreboard objectives add mbGem_nonHorseRide dummy
 
+#Magma Cube
+scoreboard objectives add mbGemClearMagma dummy
+
 #Panda
 scoreboard objectives add mbGemPandaRoll dummy
 

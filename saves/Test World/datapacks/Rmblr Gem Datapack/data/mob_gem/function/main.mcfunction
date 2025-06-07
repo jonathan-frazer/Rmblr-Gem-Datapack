@@ -159,6 +159,15 @@ execute as @e[type=item,tag=!mbGemitemInvul] if data entity @s Item.components.m
     execute as @a[predicate=mob_gem:llama_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/llama/spit/0_trigger
     execute as @e[type=llama_spit,name=mbGemSpit] at @s run function mob_gem:mob_gem/llama/spit/damage
 
+#Magma Cube
+    #Ability
+    execute as @a[predicate=mob_gem:magma_cube_gem/holding_item,scores={mbGem_Click=1..3},predicate=mob_gem:on_ground] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/magma_cube/stomp/0_trigger
+    effect clear @a[predicate=mob_gem:magma_cube_gem/has_item,predicate=mob_gem:magma_cube_gem/stomp_levitation,tag=mbGemMagmaStomp] levitation
+    execute as @a[tag=mbGemMagmaStomp] run function mob_gem:mob_gem/magma_cube/stomp/1_dur
+    execute as @a[tag=mbGemMagmaStomp,predicate=mob_gem:magma_cube_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-1 ~ #mob_gem:passable run function mob_gem:mob_gem/magma_cube/stomp/2_land_check
+    execute as @a[tag=mbGemMagmaStomp,predicate=mob_gem:magma_cube_gem/has_item,predicate=!mob_gem:on_ground] positioned as @s unless block ~ ~-2 ~ #mob_gem:passable run function mob_gem:mob_gem/magma_cube/stomp/2_land_check
+    execute as @a[scores={mbGemClearMagma=1..}] run function mob_gem:mob_gem/magma_cube/stomp/3_land_clear
+
 #MooshRoom
     #Ability
     execute as @a[predicate=mob_gem:mooshroom_gem/holding_item,scores={mbGem_Click=1..3}] at @s unless score @s mbGem_AbilityCooldown matches 1.. run function mob_gem:mob_gem/mooshroom/super_stew/0_trigger
